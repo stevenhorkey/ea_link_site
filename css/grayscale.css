@@ -157,10 +157,12 @@
 
 .btn-primary {
   background-color: #F19F4D;
+  padding: 1rem;
 }
 
 .btn-primary:hover {
   background-color: #ed861e;
+  color: black;
 }
 
 .btn-primary:focus {
@@ -199,7 +201,6 @@
 
 .projects-section .project-text {
   padding: 3rem;
-  font-size: 90%;
 }
 
 @media (min-width: 992px) {
@@ -221,6 +222,14 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+}
+
+.signup-section .services .service-item {
+  padding: 1rem;
+}
+
+.signup-section .services .service-item i {
+  font-size: 30px;
 }
 
 .signup-section .form-inline input, .signup-section .form-inline textarea {
@@ -282,6 +291,7 @@
 body {
   font-family: 'Lato';
   letter-spacing: 0.0625em;
+  font-size: 18px;
 }
 
 a {
