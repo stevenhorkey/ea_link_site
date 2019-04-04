@@ -185,7 +185,7 @@
 }
 
 .projects-section {
-  padding: 10rem 0;
+  padding: 10rem 0 0 0;
 }
 
 .projects-section .featured-text {
@@ -249,7 +249,7 @@
 }
 
 .pricing-section {
-  padding: 0 0 10rem 0;
+  padding: 10rem 0;
 }
 
 .pricing-section .table td, .pricing-section .table th {
