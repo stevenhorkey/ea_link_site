@@ -1,3 +1,10 @@
+function setHeight(jq_in){
+  jq_in.each(function(index, elem){
+      // This line will work with pure Javascript (taken from NicB's answer):
+      elem.style.height = elem.scrollHeight+'px'; 
+  });
+}
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -38,5 +45,7 @@
   navbarCollapse();
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
+
+  setHeight($('contact-message'))
 
 })(jQuery); // End of use strict

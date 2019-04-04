@@ -244,6 +244,44 @@
   border: 0;
 }
 
+.signup-section .form-inline textarea {
+  min-height: 170px;
+}
+
+.pricing-section {
+  padding: 0 0 10rem 0;
+}
+
+.pricing-section .table td, .pricing-section .table th {
+  vertical-align: middle;
+}
+
+.pricing-section .featured-text {
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .pricing-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #F19F4D;
+  }
+}
+
+.pricing-section .pricing-text {
+  padding: 3rem;
+}
+
+@media (min-width: 992px) {
+  .pricing-section .pricing-text {
+    padding: 5rem;
+  }
+  .pricing-section .pricing-text hr {
+    border-color: #F19F4D;
+    border-width: .25rem;
+    width: 30%;
+  }
+}
+
 .contact-section {
   padding: 5rem 0 0;
 }
