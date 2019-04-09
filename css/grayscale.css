@@ -8,6 +8,8 @@
 #mainNav {
   min-height: 56px;
   background-color: #fff;
+  background-color: #fff;
+  border-bottom: 1px solid gray;
 }
 
 #mainNav .navbar-toggler {
@@ -70,6 +72,7 @@
   }
   #mainNav.navbar-shrink {
     background-color: #161616;
+    border-bottom: 1px solid #fff;
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #fff;
