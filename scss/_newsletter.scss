@@ -6,16 +6,24 @@
     flex-direction: column;
     padding: 1rem 0;
     text-transform: uppercase;
-    input{
-      box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0,0,0,.1) !important;
-      padding: 1.25rem 1rem;
-      width: 100%;
-      max-width: 450px;
-      height: auto;
-      font-family: 'Lato';
-      font-size: 80%;
-      text-transform: uppercase;
-      letter-spacing: 0.15rem;
-      border: 0;
+    #mc_embed_signup_scroll{
+      margin: 0 auto;
+      font-weight: bolder;
+      font-size: 24px;
+      max-width: 550px;
+
+      input{
+        box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0,0,0,.1) !important;
+        padding: 1.25rem 1rem;
+        width: 100%;
+        height: auto;
+        max-width: 450px;
+
+        font-family: 'Lato';
+        font-size: 80%;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        border: 0;
+      }
     }
 }
