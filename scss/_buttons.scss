@@ -11,6 +11,7 @@
 .btn-primary {
   background-color: $primary;
   padding: 1rem;
+  color: rgba(0, 0, 0, 0.5);
   &:hover {
     background-color: darken($primary, 10%);
     color: black;

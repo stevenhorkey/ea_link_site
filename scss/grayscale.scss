@@ -8,6 +8,7 @@
 @import 'signup.scss';
 @import 'pricing.scss';
 @import 'contact.scss';
+@import 'newsletter.scss';
 
 body {
   font-family: 'Lato';
@@ -38,4 +39,10 @@ a {
 
 footer {
   padding: 5rem 0;
+}
+
+.box-shadow {
+  -webkit-box-shadow: $box-shadow;
+          -moz-box-shadow: $box-shadow;
+              box-shadow: $box-shadow;
 }

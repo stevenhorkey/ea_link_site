@@ -1,0 +1,21 @@
+.newsletter-section{
+    background-color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    input{
+      box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0,0,0,.1) !important;
+      padding: 1.25rem 1rem;
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      font-family: 'Lato';
+      font-size: 80%;
+      text-transform: uppercase;
+      letter-spacing: 0.15rem;
+      border: 0;
+    }
+}
