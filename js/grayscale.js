@@ -46,6 +46,16 @@ function setHeight(jq_in){
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
+  $(window).resize(function() {
+    var windowsize = $(window).width();
+    if (windowsize < 550) {
+      //if the window is greater than 440px wide then turn on jScrollPane..
+      $(".navbar-brand").html('Steven Horkey')
+    } else {
+      $(".navbar-brand").html('Steven Horkey | Session Musician')
+    }
+  });
+
   setHeight($('contact-message'))
 
 })(jQuery); // End of use strict
