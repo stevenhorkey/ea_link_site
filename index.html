@@ -31,6 +31,36 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
+  <!-- Drift Chat -->
+  <!-- Start of Async Drift Code -->
+  <script>
+    "use strict";
+    
+    !function() {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+        t.factory = function(e) {
+          return function() {
+            var n = Array.prototype.slice.call(arguments);
+            return n.unshift(e), t.push(n), t;
+          };
+        }, t.methods.forEach(function(e) {
+          t[e] = t.factory(e);
+        }), t.load = function(t) {
+          var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+          o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+          var i = document.getElementsByTagName("script")[0];
+          i.parentNode.insertBefore(o, i);
+        };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('9e38fpgvg92f');
+    </script>
+    <!-- End of Async Drift Code -->
+
 </head>
 
 <body id="page-top">
@@ -111,15 +141,23 @@
       </div>
 
       <!-- Project One Row -->
-      <div class="row justify-content-center no-gutters mb-5 mb-lg-0 box-shadow">
-        <div class="col-lg-6">
-          <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+      <div class="row bg-black justify-content-center no-gutters mb-5 mb-lg-0 box-shadow">
+        <div class="col-lg-7">
+          <div class="">
+            <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eRMYMQZ1Vy0" allowfullscreen></iframe> -->
+
+            <div class='onq-youtube-player' data-id='eRMYMQZ1Vy0' data-width='640' data-height='460' data-ssv='false' data-spc='true' data-sta='false' data-afs='true' data-dkc='false' data-ecc='false' data-eap='false'>
+              <img src='//i.ytimg.com/vi/eRMYMQZ1Vy0/hqdefault.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;'>
+              <div style='height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("/img/playbutton.png") no-repeat; background-size: 72px;'></div>
+           </div>
+
+          </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-5">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left text-white">
-                <h4 class="mb-4">The Vocalist</h4>
+                <h4 class="mb-4">Your Vocalist</h4>
                 <p class="mb-3">Clients appreciate Steven's voice for it's clarity and power. Utilizing professional microphones and recording equipment, he...</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
@@ -136,15 +174,23 @@
       </div>
 
       <!-- Project Two Row -->
-      <div class="row justify-content-center no-gutters box-shadow">
-        <div class="col-lg-6">
-          <img class="img-fluid w-100" src="/img/DSCN4724.png" alt="">
+      <div class="row bg-black justify-content-center no-gutters box-shadow">
+        <div class="col-lg-7">
+          <div class="">
+            <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OPwMQk226_Y" allowfullscreen></iframe> -->
+
+            <div class='onq-youtube-player' data-id='OPwMQk226_Y' data-width='640' data-height='460' data-ssv='false' data-spc='true' data-sta='false' data-afs='true' data-dkc='false' data-ecc='false' data-eap='false'>
+              <img src='//i.ytimg.com/vi/OPwMQk226_Y/hqdefault.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;'>
+              <div style='height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("/img/playbutton.png") no-repeat; background-size: 72px;'></div>
+           </div>
+
+          </div>
         </div>
-        <div class="col-lg-6 order-lg-first">
+        <div class="col-lg-5 order-lg-first">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">The Guitarist</h4>
+                <h4 class="text-white">Your Guitarist</h4>
                 <p class="text-white">Steven's weapon of choice is a custom built vintage-modern stratocaster. He also utilizes acoustic, classical and lap steel guitars to create the sounds he and his clients want.</p>
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
