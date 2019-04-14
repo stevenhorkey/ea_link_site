@@ -99,6 +99,12 @@
   color: #fff;
 }
 
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  background-color: #F19F4D;
+  border-color: #F19F4D;
+  color: white !important;
+}
+
 .masthead {
   position: relative;
   width: 100%;
@@ -195,7 +201,7 @@
 }
 
 .about-section {
-  padding-top: 10rem;
+  padding: 3rem 0 0 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#161616), to(#00000060)), url("/img/mixer.jpg");
   background: linear-gradient(#161616, #00000060), url("/img/mixer.jpg");
   background-size: cover;
@@ -203,12 +209,18 @@
   min-height: 500px;
 }
 
-.about-section p {
-  margin-bottom: 5rem;
+.about-section .card {
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.about-section .card i {
+  font-size: 36px;
+  margin: 5px 0 10px;
 }
 
 .projects-section {
-  padding: 10rem 0 0 0;
+  padding: 5rem 0 0 0;
 }
 
 .projects-section .no-gutters .col-lg-6 img {
@@ -266,41 +278,43 @@
 }
 
 .signup-section {
-  padding: 10rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
+  padding: 5rem 0 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
 
-.signup-section .services .service-item {
-  padding: 1rem;
+label {
+  display: inline-block;
+  margin-bottom: .2rem;
 }
 
-.signup-section .services .service-item i {
-  font-size: 26px;
+hr {
+  margin-top: 1.2rem;
 }
 
-.signup-section .form-inline input, .signup-section .form-inline textarea {
-  -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 1rem;
-  height: auto;
-  font-family: 'Lato';
-  font-size: 80%;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  border: 0;
-}
-
-.signup-section .form-inline textarea {
-  min-height: 170px;
+@media only screen and (min-width: 414px) {
+  .modal-body {
+    padding: 1rem 2rem 2rem;
+  }
+  .form-inline .form-control {
+    display: block !important;
+  }
 }
 
 .pricing-section {
-  padding: 10rem 0;
+  padding: 6rem 0 2rem 0;
+}
+
+.pricing-section .pricing-num {
+  font-weight: bolder;
+  font-size: 50px;
+  margin: 1rem 0 1.5rem 0;
+  width: 100%;
+  text-align: center;
 }
 
 .pricing-section .table td, .pricing-section .table th {
@@ -333,8 +347,30 @@
   }
 }
 
-.contact-section {
-  padding: 5rem 0 0;
+.services .service-item {
+  padding: 1rem;
+  color: black;
+  text-align: center;
+}
+
+.services .service-item i {
+  font-size: 26px;
+}
+
+.form-inline input, .form-inline textarea {
+  -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 1rem;
+  height: auto;
+  font-family: 'Lato';
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border: 0;
+}
+
+.form-inline textarea {
+  min-height: 170px;
 }
 
 .contact-section .card {
@@ -392,7 +428,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 1rem 0;
+  padding: 2rem 0;
   text-transform: uppercase;
 }
 
@@ -436,6 +472,10 @@ a:focus, a:hover {
   color: #c86c10;
 }
 
+.round {
+  border-radius: .25rem;
+}
+
 .bg-black {
   background-color: #161616 !important;
 }
@@ -455,4 +495,11 @@ footer {
 .box-shadow {
   -webkit-box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.1);
   box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.1);
+}
+
+.card {
+  -webkit-box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.1);
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.1);
+  margin: 20px 0;
+  padding: 30px;
 }

@@ -1,5 +1,14 @@
 .pricing-section {
-  padding: 10rem 0;
+  padding: 6rem 0 2rem 0;
+
+  .pricing-num{
+    font-weight: bolder;
+    font-size: 50px;
+    margin: 1rem 0 1.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  
   td {
     
   }
@@ -23,5 +32,35 @@
         width: 30%;
       }
     }
+  }
+}
+
+.services{
+  .service-item{
+    // background: #00000080;
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    padding: 1rem;
+    color: black;
+    text-align: center;
+    i{
+      font-size: 26px;
+    }
+  }
+}
+.form-inline {
+  input, textarea {
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0,0,0,.1) !important;
+    padding: 1.25rem 1rem;
+    height: auto;
+    font-family: 'Lato';
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    border: 0;
+  }
+  textarea{
+    min-height: 170px;
   }
 }

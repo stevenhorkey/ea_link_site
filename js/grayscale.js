@@ -50,13 +50,22 @@ function setHeight(jq_in){
     var windowsize = $(window).width();
     if (windowsize < 550) {
       //if the window is greater than 440px wide then turn on jScrollPane..
+      $("body").css({
+        'padding-top': $(".navbar").outerHeight()/2
+      })
       $(".navbar-brand").html('Steven Horkey')
+      $("#drift-widget-container").hide();
+      
     } else if (windowsize >992){
+      $("#drift-widget-container").show();
       $(".project-text").each(function(){
         var vidHeight = $(".embed-responsive-item").outerHeight();
         $(this).css({
           'height': vidHeight
         });
+      });
+      $("body").css({
+        'padding-top': 0
       })
     } else {
       $(".navbar-brand").html('Steven Horkey | Session Musician');
@@ -67,5 +76,7 @@ function setHeight(jq_in){
 
   // youtube optimization code from https://www.onqmarketing.com.au/youtube-embed-generator/
   !function(){for(var t=document.getElementsByClassName("onq-youtube-player"),e=0;e<t.length;e++)t[e].onclick=function(){var t=document.createElement("iframe"),e="true"==this.dataset.ssv?"1":"0",s="true"==this.dataset.spc?"1":"0",i="true"==this.dataset.sta?"1":"0",a="true"==this.dataset.dkc?"1":"0",r="true"==this.dataset.ecc?"1":"0",o="true"==this.dataset.eap?"1":"0";for(t.setAttribute("src","//www.youtube.com/embed/"+this.dataset.id+"?rel="+e+"&controls="+s+"&showinfo="+i+"&disablekb="+a+"&cc_load_policy="+r+"&autoplay="+o),t.setAttribute("frameborder","0"),t.setAttribute("id","youtube-iframe"),t.setAttribute("style","width: 100%; height: 100%; position: absolute; top: 0; left: 0;"),"true"==this.dataset.afs&&t.setAttribute("allowfullscreen","");this.firstChild;)this.removeChild(this.firstChild);this.appendChild(t)}}();
+
+  
 
 })(jQuery); // End of use strict

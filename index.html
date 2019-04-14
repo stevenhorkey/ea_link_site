@@ -3,6 +3,16 @@
 
 <head>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138306700-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138306700-1');
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -37,7 +47,7 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Steven Horkey | Session Musician</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         MENU
@@ -56,6 +66,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <a class="btn btn-primary py-3 nav-link js-scroll-trigger mx-3 text-black" href="#order-btn-nav" data-toggle="modal" data-target="#orderModal">Start a Project</a>
           </li>
         </ul>
       </div>
@@ -82,7 +95,52 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2 class="text-white mb-4">What You Can Expect</h2>
-          <p class="text-white">As a trained guitarist and vocalist, Steven has been making, recording, and engineering music for the past decade. Whether it be an original track or a cover song, acoustic or electric, he can work with you to put together a song that everyone involved can be proud of.</p>
+          <p class="text-white mb-0">As a trained guitarist and vocalist, Steven has been making, recording, and engineering music for the past decade. Whether it be an original track or a cover song, acoustic or electric, he can work with you to put together a song that everyone involved can be proud of.</p>
+        </div>
+      </div>
+      <!-- <img src="img/ipad.png" class="img-fluid" alt=""> -->
+    <!-- </div>
+  </section> -->
+
+  <!-- How it works Section -->
+  <!-- <section id="about" class="about-section how-section text-center pb-0">
+    <div class="container"> -->
+      <div class="row">
+        <div class="col-lg-4 mx-auto how-cards mb-1 py-5">
+          <h2 class="text-white mb-5">How It Works</h2>
+          <div class="card d-flex align-items-center py-3">
+              <i class="fas fa-list-ol"></i>
+              <p>Fill out the online form and include your reference tracks.</p>
+          </div>
+          <div>
+              <i class="fas text-white mx-auto fa-arrow-down"></i>
+          </div>
+          <div class="card  d-flex align-items-center py-3">
+              <i class="fas fa-headphones"></i>
+
+              <p>Your order will be reviewed and we'll be in contact.</p>
+          </div>
+          <div>
+              <i class="fas text-white mx-auto fa-arrow-down"></i>
+          </div>
+          <div class="card  d-flex align-items-center py-3">
+              <i class="fas fa-microphone-alt"></i>
+              <p>Within 5 days of the order confirmation, your tracks will be recorded and sent to you for feedback.</p>
+          </div>
+          <div>
+              <i class="fas text-white mx-auto fa-arrow-down"></i>
+          </div>
+          <div class="card  d-flex align-items-center py-3">
+              <i class="fab fa-paypal"></i>
+              <p>After discussing and working out any revisions, you will receive your secure paypal invoice.</p>
+          </div>
+          <div>
+              <i class="fas text-white mx-auto fa-arrow-down"></i>
+          </div>
+          <div class="card  d-flex align-items-center py-3">
+            <i class="fas fa-check-double"></i>
+              <p>Once paid, you will receive your full resolution tracks.</p>
+          </div>
         </div>
       </div>
       <!-- <img src="img/ipad.png" class="img-fluid" alt=""> -->
@@ -111,7 +169,7 @@
       </div>
 
       <!-- Project One Row -->
-      <div class="row bg-black justify-content-center no-gutters mb-5 mb-lg-0 box-shadow">
+      <div class="row bg-black justify-content-center no-gutters mb-4 mb-lg-0 box-shadow">
         <div class="col-lg-7">
           <div class="">
             <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eRMYMQZ1Vy0" allowfullscreen></iframe> -->
@@ -144,7 +202,7 @@
       </div>
 
       <!-- Project Two Row -->
-      <div class="row bg-black justify-content-center no-gutters box-shadow">
+      <div class="row bg-black justify-content-center no-gutters box-shadow mb-4">
         <div class="col-lg-7">
           <div class="">
             <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OPwMQk226_Y" allowfullscreen></iframe> -->
@@ -169,7 +227,7 @@
         </div>
       </div>
       <!-- Guitarist Sound Cloud Embed -->
-      <div class="row mt-3 mb-5">
+      <div class="row mt-3">
         <div class="col-12">
           <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/749676456&color=%23f19f4d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
         </div>
@@ -186,8 +244,104 @@
           <div class="col-12">
               <h2 class="text-dark mb-5 text-center text-uppercase">Pricing</h2>
               <h5 class="font-italic text-center mb-5 text-black-50">Pay for what you need, not what you don't...</h5>
+              <div class="row my-5 text-white services d-flex justify-content-center">
+                <div class="col-md-3 service-item">
+                  <i class="fas fa-guitar"></i>
+                  <p>Professional Guitar and Vocal Tracks</p>
+                </div>
+                <div class="col-md-3 service-item">
+                  <i class="fas fa-handshake"></i>
+                  <p>Unlimited Revisions Included with Each Order</p>
+                </div>
+                <div class="col-md-3 service-item">
+                  <i class="fas fa-dollar-sign"></i>
+                  <p>Simple & Competitive Rates</p>
+                </div>
+                <div class="col-md-3 service-item">
+                  <i class="fas fa-globe"></i>
+                  <p>Commercial Use & Royalty Free</p>
+                </div>
+                <div class="col-md-3 service-item">
+                  <i class="fas fa-file-audio"></i>
+                  <p>HQ Audio Files in Your Format of Choice</p>
+                </div>
+                <div class="col-md-3 service-item">
+                  <i class="fas fa-sliders-h"></i>
+                  <p>Offers Polished Mixing and Mastering Services</p>
+                </div>
+                <div class="col-md-3 service-item">
+                  <i class="fas fa-video"></i>
+                  <p>Offers HD Video Recording of Performance</p>
+                </div>
+              </div>
+
               <p class="mx-auto mb-5 text-center" style="max-width: 800px;">I want this to be a simple process so both of us can focus on the music. Below is my straightforward pricing model, but if you have any custom inquiries or questions, dont hesitate to <a class="js-scroll-trigger" href="#contact">contact me</a>.</p>
-              <div class="table-responsive">
+
+              <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="card">
+                      <h3 class="text-uppercase text-center w-100">Standard Package</h3>
+                      <div class="pricing-num">$50</div>
+                      <p class="text-center mb-4">One vocal or guitar track for your song.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card">
+                      <h3 class="text-uppercase text-center w-100">Premium Package</h3>
+                      <div class="pricing-num">$100</div>
+                      <p class="text-center mb-4">Unlimited Vocal Tracks For Your Song<br/><small>Leads, Harmonies, etc.</small></p>
+                      <!-- <small>Includes leads, harmonies, etc.</small> -->
+                      <p class="text-center mb-4 font-italic font-weight-bolder">OR</p>
+                      <p class="text-center mb-4">Unlimited Guitar Tracks For Your Song<br/><small>Solos, Rhythm Tracks, etc.</small></p>
+                      <!-- <small>Includes solos, rhythm guitar, etc.</small> -->
+                    </div>
+                  </div>
+                  <!-- <div class="col-md-4">
+                    <div class="card">
+                      <h3 class="text-uppercase text-center w-100">Premium Package</h3>
+                        <p class="text-center mb-4">Unlimited Vocal Tracks for your Song</p>
+                        <p class="text-center mb-4 font-italic font-weight-bolder">OR</p>
+                        <p class="text-center mb-4">Unlimited Guitar Tracks for your Song</p>
+                        <p class="text-center mb-4 font-italic font-weight-bolder">PLUS</p>
+                        <p class="text-center mb-4">Full Mix and Master of Your Song</p>
+                        <p class="text-center mb-1">HD Video of Recording Performance</p>
+                    </div>
+                  </div> -->
+                  
+
+              </div>
+
+              <div class="row text-white services d-flex justify-content-center">
+                <div class="col-md-3 service-item">
+                 <div class="card">
+                    <i class="fas fa-sliders-h"></i>
+                    <h3 class="my-3 font-weight-bolder">$15</h3>
+                    <p>Mix and master a Basic Package track with your file of choice</p>
+                    <small>Stems included upon request</small>
+                 </div>
+                </div>
+                <div class="col-md-3 service-item">
+                 <div class="card">
+                    <i class="fas fa-sliders-h"></i>
+                    <h3 class="my-3 font-weight-bolder">$40</h3>
+                    <p>Add a Polished Mix and Master of Your Entire Song</p>
+                    <small>Stems included upon request</small>
+                 </div>
+                </div>
+                <div class="col-md-3 service-item">
+                    <div class="card mt-0">
+                        <i class="fas fa-video"></i>
+                        <h3 class="my-3 font-weight-bolder">$20</h3>
+                        <p>Add a HD Video Recording of My Performance</p>
+                        <small>Video Editing Not Included But Can Be Done. Contact for more details</small>
+                     </div>
+                </div>
+                
+                 
+              </div>
+              
+              <!-- <div class="table-responsive">
                 <table class="table">
                     <thead class="thead-light">
                       <tr>
@@ -234,7 +388,7 @@
                       </tr>
                     </tbody>
                   </table>
-              </div>
+              </div> -->
           </div>
         </div>
       </div>
@@ -247,8 +401,8 @@
       <div id="mc_embed_signup">
       <form action="https://gmail.us20.list-manage.com/subscribe/post?u=9206f8531d264af167f251ce6&amp;id=a7e6806ea9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
-        <label for="mce-EMAIL">Subscribe for my periodic mailing list for exclusive deals and $10 off your first order</la>
-        <input type="email" value="" name="EMAIL" class="round email d-block mx-auto my-3" id="mce-EMAIL" placeholder="email address" required>
+        <label for="mce-EMAIL">Keep in touch, receive exclusive deals, and take $10 off your first order</la>
+        <input type="email" value="" name="EMAIL" class="form-control email d-block mx-auto my-3" id="mce-EMAIL" placeholder="email address" required>
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9206f8531d264af167f251ce6_a7e6806ea9" tabindex="-1" value=""></div>
           <div class="clear text-center"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn bg-dark text-white"></div>
@@ -268,41 +422,12 @@
         <div class="col-md-10 col-lg-8 mx-auto text-center">
 
           <!-- <i class="far fa-paper-plane fa-2x mb-2 text-white"></i> -->
-          <h3 class="text-white mb-4 text-uppercase">Have a project in mind? Shoot me a message.</h3>
-          <p class="text-white">If you are here and reading this, then my guess is that you want something special to come through on your song. My goal, with all the music I do, is to end up with a track that expresses the most passion and depth possible. If that interests you, let's get started...</p>
+          <h3 class="text-white text-uppercase">Have a project in mind? Let's get started.</h3>
+          <button class="btn btn-primary mx-auto w-100 my-5 text-black" data-toggle="modal" data-target="#orderModal" style="padding:1.25rem 1rem;">Start A Project</button>
+          <!-- <p class="text-white">If you are here and reading this, then my guess is that you want something special to come through on your song. My goal, with all the music I do, is to end up with a track that expresses the most passion and depth possible. If that interests you, let's get started...</p> -->
+          <h3 class="text-white mb-4 text-uppercase">Question instead? Shoot me a message...</h3>
 
-          <div class="row my-5 text-white services d-flex justify-content-center">
-            <div class="col-md-3 service-item">
-              <i class="fas fa-guitar"></i>
-              <p>Professional Guitar and Vocal Tracks</p>
-            </div>
-            <div class="col-md-3 service-item">
-              <i class="fas fa-file-audio"></i>
-              <p>HQ Audio Files in Your Format of Choice</p>
-            </div>
-            <div class="col-md-3 service-item">
-              <i class="fas fa-sliders-h"></i>
-              <p>Offers Polished Mixing and Mastering Services</p>
-            </div>
-            <div class="col-md-3 service-item">
-              <i class="fas fa-dollar-sign"></i>
-              <p>Simple & Competitive Rates</p>
-            </div>
-            <div class="col-md-3 service-item">
-              <i class="fas fa-video"></i>
-              <p>Offers HD Video Recording of Performance</p>
-            </div>
-            <div class="col-md-3 service-item">
-              <i class="fas fa-globe"></i>
-              <p>Commercial Use & Royalty Free</p>
-            </div>
-            <div class="col-md-3 service-item">
-              <i class="fas fa-handshake"></i>
-              <p>Unlimited Revisions Included with Each Order</p>
-            </div>
-          </div>
-
-          <form class="form-inline d-block" name="contact" method="POST" data-netlify="true">
+          <form class="form-inline d-block" name="order" method="POST" data-netlify="true" >
             <div class="row mb-3 px-3">
               <input name="name" type="text" class="col-12 form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputName" placeholder="Enter your name...">
               <input name="email" type="email" class="col-12 form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
@@ -310,13 +435,96 @@
             <div class="row mb-3 px-3">
               <textarea name="message" id="contact-message" placeholder="Enter your message..." class="col-12 form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary mx-auto">Send Message</button>
+            <button type="submit" class="btn btn-primary mx-auto w-100">Send Message</button>
           </form>
 
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content bg-light">
+        <div class="modal-header">
+
+            <h3 class="text-center text-uppercase mb-0">Project Order Form</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="form-inline d-block" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <p class="d-none">
+                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+              <div class="row mb-3 px-3">
+                <label>Full Name</label>
+                <input name="name" type="text" class="col-12 form-control w-100 flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputName" placeholder="Enter your full name..." required>
+              </div>
+              <div class="row mb-3 px-3">
+                <label>Email Address</label>
+                <input name="email" type="email" class="col-12 form-control w-100 flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter your email address..." required>
+              </div>
+              <hr/>
+              <p class="font-italic mb-4 text-center">Please complete this checklist to ensure everything is properly prepared.</p>
+              <div class="row mb-3 px-3">
+                <div>
+                  <input name="correct_arrangement" type="checkbox" required/>
+                  <label class="d-inline">The song(s) are recorded in the correct arrangement.</label>
+                </div>
+              </div>
+              <div class="row mb-3 px-3">
+                  <div>
+                      <input name="correct_tempo" type="checkbox" required/>
+                      <label class="d-inline">The song(s) are recorded at the correct tempo.</label>
+                    </div>
+              </div>
+              <div class="row mb-3 px-3">
+                  <div>
+                      <input name="uploaded_to_cloud" type="checkbox" required/>
+                      <label class="d-inline">The files have been uploaded to a file sharing site such as DropBox, Google Drive or WeTransfer and the link is publicly accesible.</label>
+                    </div>
+              </div>
+              <div class="row mb-3 px-3">
+                  <div>
+                      <input name="aware_of_paypal" type="checkbox" required/>
+                      <label class="d-inline">I am aware that I will be paying securely through PayPal after I approve the delivered tracks. This can be done using PayPal balance or credit card.</label>
+                    </div>
+              </div>
+              <hr/>
+
+              <div class="row mb-3 px-3">
+                  <div>
+                      <label class="mb-2">Link to the reference files you'd like me to record with (i.e DropBox, GoogleDrive, WeTransfer)</label>
+                      <input required name="files_link" type="text" class="w-100 form-control flex-fill mr-0 mr-sm-2 mb-0 mb-sm-0" id="filesLink" placeholder="URL link to files.">
+                    </div>
+              </div>
+
+                
+              <div class="row mb-3 px-3">
+                <label class="mb-2">Any notes, special requests, or things I should keep in mind? Fill me in on what you want AND what you don't want.</label>
+                <textarea name="recording_notes" id="recording_notes" placeholder="Notes for recording." class="col-12 form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"></textarea>
+              </div>
+              <div class="row mb-3 px-3">
+                  <label class="mb-2">Any songs you want me to mimic or keep in mind as I record?</label>
+                  <textarea name="keep_songs_in_mind" id="keep_songs_in_mind" placeholder="Enter songs here." class="col-12 form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"></textarea>
+              </div>
+              <hr/>
+              <div class="text-center w-100 mb-3">
+                  <p class="font-italic">Once you submit your order, I will review it and contact you to let you know if we can proceed.</p>
+              </div>
+              <button type="submit" class="btn btn-primary mx-auto w-100 mb-3">Submit Order for Review</button>
+              <div class="text-center w-100">
+                <small>You can always change your mind later and cancel your order before we confirm to record.</small>
+              </div>
+            </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Contact Section -->
   <section class="contact-section bg-black">
@@ -342,7 +550,7 @@
   <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">
     <div class="container">
-      Copyright &copy; Steven Horkey 2019
+      Copyright &copy; Sessions By Steven 2019
       <br/>
       <a href="mailto:music@stevenhorkey.com">music@stevenhorkey.com</a>
     </div>

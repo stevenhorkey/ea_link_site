@@ -4,6 +4,7 @@
 @import 'masthead.scss';
 @import 'buttons.scss';
 @import 'about.scss';
+@import 'how_it_works.scss';
 @import 'projects.scss';
 @import 'signup.scss';
 @import 'pricing.scss';
@@ -26,6 +27,9 @@ a {
   }
 }
 
+.round{
+  border-radius: .25rem;
+}
 .bg-black {
   background-color: $black !important;
 }
@@ -46,4 +50,12 @@ footer {
   -webkit-box-shadow: $box-shadow;
           -moz-box-shadow: $box-shadow;
               box-shadow: $box-shadow;
+}
+
+.card{
+  -webkit-box-shadow: $box-shadow;
+          -moz-box-shadow: $box-shadow;
+              box-shadow: $box-shadow;
+  margin: 20px 0;
+  padding: 30px;
 }

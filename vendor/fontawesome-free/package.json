@@ -2,7 +2,7 @@
   "_args": [
     [
       "@fortawesome/fontawesome-free@5.8.1",
-      "/Users/stevenhorkey/Downloads/startbootstrap-grayscale-gh-pages"
+      "/Users/stevenhorkey/Downloads/session-site-static"
     ]
   ],
   "_from": "@fortawesome/fontawesome-free@5.8.1",
@@ -27,7 +27,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.8.1.tgz",
   "_spec": "5.8.1",
-  "_where": "/Users/stevenhorkey/Downloads/startbootstrap-grayscale-gh-pages",
+  "_where": "/Users/stevenhorkey/Downloads/session-site-static",
   "author": {
     "name": "Dave Gandy",
     "email": "dave@fontawesome.com",

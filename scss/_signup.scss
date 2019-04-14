@@ -1,35 +1,28 @@
 .signup-section {
-  padding: 10rem 0;
-  background: linear-gradient(to bottom, #{fade-out($black, .9)} 0%,#{fade-out($black, .5)} 75%,$black 100%), url('../img/bg-signup.jpg');
+  padding: 5rem 0 1rem;
+  background: linear-gradient(to bottom, #{fade-out($black, .7)} 0%,#{fade-out($black, .5)} 75%,$black 100%), url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  .services{
-    .service-item{
-      // background: #00000080;
-      // display: flex;
-      // justify-content: center;
-      // flex-direction: column;
-      padding: 1rem;
-      i{
-        font-size: 26px;
-      }
-    }
+  
+  
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .2rem;
+}
+
+hr{
+  margin-top: 1.2rem;
+}
+
+@media only screen and (min-width: 414px){
+  .modal-body{
+    padding: 1rem 2rem 2rem;
   }
-  .form-inline {
-    input, textarea {
-      box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0,0,0,.1) !important;
-      padding: 1.25rem 1rem;
-      height: auto;
-      font-family: 'Lato';
-      font-size: 80%;
-      text-transform: uppercase;
-      letter-spacing: 0.15rem;
-      border: 0;
-    }
-    textarea{
-      min-height: 170px;
-    }
+  .form-inline .form-control{
+    display: block !important;
   }
 }
