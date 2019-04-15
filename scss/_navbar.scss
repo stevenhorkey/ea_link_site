@@ -18,8 +18,14 @@
     text-transform: uppercase;
   }
   .navbar-nav {
+    #nav-project{
+      color: black;
+      padding: 1rem;
+    }
     .nav-item {
       text-transform: uppercase;
+      justify-content: center;
+
       &:hover {
         color: fade(white, 80%);
         outline: none;

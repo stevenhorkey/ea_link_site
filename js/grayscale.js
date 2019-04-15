@@ -5,8 +5,44 @@ function setHeight(jq_in){
   });
 }
 
+function openOrderModal(type){
+  $("#orderModal").modal('show');
+  $("#order-form-title").html('Order Form: ' + type);
+  $("#order-form").attr('name',type);
+}
+
+function loadDrift(){
+  !function() {
+    var t = window.driftt = window.drift = window.driftt || [];
+    if (!t.init) {
+      if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+      t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+      t.factory = function(e) {
+        return function() {
+          var n = Array.prototype.slice.call(arguments);
+          return n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+        var i = document.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(o, i);
+      };
+    }
+  }();
+  drift.SNIPPET_VERSION = '0.3.1';
+  drift.load('9e38fpgvg92f');
+}
+
 (function($) {
   "use strict"; // Start of use strict
+
+  AOS.init();
+
+  $("#initVocals").click(function(){openOrderModal('vocals')});
+  $("#initGuitar").click(function(){openOrderModal('guitar')});
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -50,14 +86,15 @@ function setHeight(jq_in){
     var windowsize = $(window).width();
     if (windowsize < 550) {
       //if the window is greater than 440px wide then turn on jScrollPane..
+      console.log('come on')
       $("body").css({
-        'padding-top': $(".navbar").outerHeight()/2
+        'padding-top': $(".navbar").outerHeight()/3
       })
-      $(".navbar-brand").html('Steven Horkey')
-      $("#drift-widget-container").hide();
+      $(".navbar-brand").html('Sessions By Steven');
       
-    } else if (windowsize >992){
-      $("#drift-widget-container").show();
+    } else if (windowsize > 992){
+      console.log("this big")
+      $("#drift-widget").show();
       $(".project-text").each(function(){
         var vidHeight = $(".embed-responsive-item").outerHeight();
         $(this).css({
@@ -67,8 +104,9 @@ function setHeight(jq_in){
       $("body").css({
         'padding-top': 0
       })
+      loadDrift();
     } else {
-      $(".navbar-brand").html('Steven Horkey | Session Musician');
+      $(".navbar-brand").html('Sessions By Steven<br/><small class="d-block">Professional Guitar <br/>& Vocal Tracks</small>');
     }
   }).resize();
 

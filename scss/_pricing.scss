@@ -51,14 +51,19 @@
 }
 .form-inline {
   input, textarea {
-    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0,0,0,.1) !important;
-    padding: 1.25rem 1rem;
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0,0,0,.1);
+    padding: 1rem 1rem;
     height: auto;
     font-family: 'Lato';
     font-size: 80%;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
     border: 0;
+  }
+  input[type=checkbox]{
+    box-shadow: none;
+    position: relative;
+    bottom: 2px;
   }
   textarea{
     min-height: 170px;
