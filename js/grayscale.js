@@ -84,16 +84,23 @@ function loadDrift(){
 
   $(window).resize(function() {
     var windowsize = $(window).width();
-    if (windowsize < 550) {
+    if (windowsize < 650) {
       //if the window is greater than 440px wide then turn on jScrollPane..
       console.log('come on')
       $("body").css({
         'padding-top': $(".navbar").outerHeight()/3
       })
-      $(".navbar-brand").html('Sessions By Steven');
+      $(".nav-tagline").hide();
+
+      // $(".navbar-brand").html('Sessions By Steven');
       
     } else if (windowsize > 992){
+      $("body").css({
+        'padding-top': '0px'
+      });
       console.log("this big")
+      $(".nav-tagline").hide();
+      $(".navbar-brand").html('Sessions By Steven<br/><small class="d-block">Professional Guitar <br/>& Vocal Tracks</small>');
       $("#drift-widget").show();
       $(".project-text").each(function(){
         var vidHeight = $(".embed-responsive-item").outerHeight();
@@ -101,12 +108,11 @@ function loadDrift(){
           'height': vidHeight
         });
       });
-      $("body").css({
-        'padding-top': 0
-      })
+      
       loadDrift();
-    } else {
-      $(".navbar-brand").html('Sessions By Steven<br/><small class="d-block">Professional Guitar <br/>& Vocal Tracks</small>');
+    } else if (windowsize > 768){
+      $(".nav-tagline").show();
+      $(".navbar-brand").html('Sessions By Steven');
     }
   }).resize();
 
