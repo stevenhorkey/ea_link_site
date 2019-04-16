@@ -30,7 +30,6 @@
 #mainNav .navbar-brand {
   color: #fff;
   font-weight: 700;
-  padding: .9rem 0;
   text-transform: uppercase;
 }
 
@@ -146,7 +145,7 @@
 .masthead h1 {
   font-family: 'Lato';
   font-size: 2.0rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
   letter-spacing: 0.8rem;
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
   -webkit-text-fill-color: transparent;
@@ -222,6 +221,15 @@
   min-height: 500px;
 }
 
+.hire-section {
+  padding: 2rem 0;
+}
+
+.hire-section .p-copy {
+  color: #161616;
+  text-align: left;
+}
+
 .about-section .card {
   margin: 20px 0;
   padding: 10px;
@@ -233,11 +241,11 @@
 }
 
 .testimonials .card {
-  border: 1px solid #F19F4D;
+  border: 2px solid #F19F4D;
 }
 
 .projects-section {
-  padding: 5rem 0 0 0;
+  padding: 5rem 0 3rem 0;
 }
 
 .projects-section .no-gutters .col-lg-6 img {
@@ -323,7 +331,11 @@ hr {
 }
 
 .pricing-section {
-  padding: 6rem 0 2rem 0;
+  padding: 5rem 0 2rem 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00000090), to(#00000090)), url("/img/marshall_amp.jpg");
+  background-image: linear-gradient(#00000090, #00000090), url("/img/marshall_amp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .pricing-section .pricing-num {
@@ -366,7 +378,6 @@ hr {
 
 .services .service-item {
   padding: 1rem;
-  color: black;
   text-align: center;
 }
 
