@@ -86,7 +86,7 @@ function loadDrift(){
     var windowsize = $(window).width();
     if (windowsize < 650) {
       //if the window is greater than 440px wide then turn on jScrollPane..
-      console.log('come on')
+      console.log('mobile display');
       $("body").css({
         'padding-top': $(".navbar").outerHeight()/3
       })
