@@ -1,0 +1,59 @@
+/*!
+ * Start Bootstrap - Grayscale v5.0.6 (https://startbootstrap.com/template-overviews/grayscale)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
+ */
+
+.testimonials .card {
+  border: 2px solid #F19F4D;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  width: 1em;
+  margin: 0;
+  color: inherit;
+  outline: none;
+  font-family: 'Font Awesome 5 Pro';
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
+input[type=checkbox]::after,
+input[type=radio]::after {
+  content: '\f111';
+  display: inline-block;
+  text-align: center;
+  width: 1em;
+}
+
+input[type=checkbox]:checked::after,
+input[type=radio]:checked::after {
+  font-weight: 900;
+}
+
+input[type=checkbox]:active,
+input[type=radio]:active {
+  -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+}
+
+input[type=checkbox] + span,
+input[type=radio] + span {
+  margin-left: .35em;
+}
+
+input[type=checkbox] input[type=checkbox]:checked::after,
+input[type=radio] input[type=checkbox]:checked::after {
+  content: '\f058';
+}
+
+input[type=checkbox] input[type=radio]:checked::after,
+input[type=radio] input[type=radio]:checked::after {
+  content: '\f192';
+}

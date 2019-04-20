@@ -92,6 +92,10 @@ function deleteDrift(){
       //if the window is greater than 440px wide then turn on jScrollPane..
       console.log('mobile display');
       deleteDrift();
+      setTimeout(function(){
+        console.log('please hide sc bs')
+        // $("#vocal_sc_embed").contents();
+      }, 3000)
       $("body").css({
         'padding-top': $(".navbar").outerHeight()/3
       })

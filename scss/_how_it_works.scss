@@ -8,3 +8,28 @@
     }
   }
 }
+
+#accordion{
+  .card{
+    padding: 10px;
+    margin: 0;
+    border-radius: 25px;
+    margin: 22px 0;
+    cursor: pointer;
+    // border:
+    .card-header{
+      padding: 0.75rem;
+      border-radius: 15px;
+      text-align: center;
+      h5{
+        div{
+          // font-weight: bolder;
+          font-size: 21px;
+        }
+      }
+    }
+    .button{
+      
+    }
+  }
+}

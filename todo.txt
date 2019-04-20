@@ -1,11 +1,9 @@
-Add alt tags to images
 proper meta tag and keyword set up for SEO
 optimzied images
-Check for mobile responsiveness
-check on all browsers
+Check for mobile rfesponsiveness
+check on all browsers (opera only one left, check on dads phone and my phone)
 Optimize copy with eben pagan course
-
+Don't want play on soundcloud on mobile.
 
 FOR FUTURE
 
-how it works section

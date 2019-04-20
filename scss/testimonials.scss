@@ -1,6 +1,6 @@
 .testimonials{
   .card{
-    border: 2px solid $primary;
+    border: 2px solid #F19F4D;
   }
 }
 
@@ -33,7 +33,7 @@ input[type=checkbox],
     + span {
       margin-left: .35em;
     }
-  }
+  
   
   input[type=checkbox]:checked::after {
     content: '\f058'; // check-circle

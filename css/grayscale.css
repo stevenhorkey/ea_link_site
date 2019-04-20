@@ -154,7 +154,7 @@
 
 .masthead h2 {
   max-width: 20rem;
-  font-size: 1rem;
+  font-size: 19px;
   color: #ced4da;
 }
 
@@ -240,8 +240,22 @@
   margin: 5px 0 10px;
 }
 
-.testimonials .card {
-  border: 2px solid #F19F4D;
+#accordion .card {
+  padding: 10px;
+  margin: 0;
+  border-radius: 25px;
+  margin: 22px 0;
+  cursor: pointer;
+}
+
+#accordion .card .card-header {
+  padding: 0.75rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#accordion .card .card-header h5 div {
+  font-size: 21px;
 }
 
 .projects-section {
@@ -271,7 +285,7 @@
 
 @media (min-width: 992px) {
   .projects-section .project-text {
-    padding: 5rem;
+    padding: 2rem;
   }
   .projects-section .project-text hr {
     border-color: #F19F4D;
@@ -492,10 +506,64 @@ hr {
   display: none !important;
 }
 
+.testimonials .card {
+  border: 2px solid #F19F4D;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  width: 1em;
+  margin: 0;
+  color: inherit;
+  outline: none;
+  font-family: 'Font Awesome 5 Pro';
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
+input[type=checkbox]::after,
+input[type=radio]::after {
+  content: '\f111';
+  display: inline-block;
+  text-align: center;
+  width: 1em;
+}
+
+input[type=checkbox]:checked::after,
+input[type=radio]:checked::after {
+  font-weight: 900;
+}
+
+input[type=checkbox]:active,
+input[type=radio]:active {
+  -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+}
+
+input[type=checkbox] + span,
+input[type=radio] + span {
+  margin-left: .35em;
+}
+
+input[type=checkbox] input[type=checkbox]:checked::after,
+input[type=radio] input[type=checkbox]:checked::after {
+  content: '\f058';
+}
+
+input[type=checkbox] input[type=radio]:checked::after,
+input[type=radio] input[type=radio]:checked::after {
+  content: '\f192';
+}
+
 body {
   font-family: 'Lato';
   letter-spacing: 0.0625em;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 a {

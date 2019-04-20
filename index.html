@@ -35,11 +35,11 @@
 
 
   <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
@@ -86,7 +86,7 @@
         <h1 class="mx-auto my-0 text-uppercase">Your Song<br/>Your Way</h1>
         <h2 class="mx-auto mt-2 mb-4">Professional vocals and guitar for your song <em>whenever, however, and where ever</em> you want them... all online.</h2>
         <!-- <h2 class="text-white-50 mx-auto mt-2 mb-5">As artists, we live for it. But often, making a good song is more about getting out of our own way than it is about forcing it to <em>be</em> a certain way. I can help with that.</h2> -->
-        <a href="#start" class="btn btn-primary js-scroll-trigger">Start a Project</a>
+        <a href="#contact" class="btn btn-primary js-scroll-trigger">Start a Project</a>
       </div>
     </div>
   </header>
@@ -96,7 +96,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">What You Can Expect</h2>
+          <h2 class="text-white mb-5 text-uppercase">What You Can Expect</h2>
 
           <p class="text-white mb-4">As a trained guitarist and vocalist, Steven has been making, recording, and engineering music for the past decade across a wide variety of genres.</p>
           <p class="text-white mb-4">Whether it be an original track or a cover song, acoustic or electric, he can work with you to put together a song that you and your audience will love.</p>
@@ -118,7 +118,7 @@
     <div class="container"> -->
       <div class="row mt-5">
         <div class="col-lg-4 mx-auto how-cards mb-1 py-5">
-          <h2 class="text-white mb-5">How It Works</h2>
+          <h2 class="text-white mb-5 text-uppercase">How It Works</h2>
           <div class="card d-flex align-items-center py-3">
               <i class="fas fa-list-ol"></i>
               <p>Fill out the online form, describe your project, and include your guide tracks.</p>
@@ -142,7 +142,7 @@
           </div>
           <div class="card  d-flex align-items-center py-3">
               <i class="fab fa-paypal"></i>
-              <p>After discussing and working out any revisions, you will receive your secure paypal invoice.</p>
+              <p>After discussing and working out any revisions, you will receive your secure invoice to pay via paypal or credit card.</p>
           </div>
           <div>
               <i class="fas text-white mx-auto fa-arrow-down"></i>
@@ -161,27 +161,6 @@
   <section id="projects" class="projects-section bg-light">
     <div class="container">
 
-      <!-- Featured Project Row -->
-      <!-- <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-        <div class="col-xl-8 col-lg-7">
-          <img class="img-fluid mb-3 mb-lg-0 box-shadow" src="img/bg-masthead.jpg" alt="">
-        </div>
-        <div class="col-xl-4 col-lg-5">
-          <div class="featured-text text-center text-lg-left">
-            <h4 class="mb-4">Testimonials</h4>
-            <p class="mb-3 font-italic">"He works really hard to deliver a real masterpiece, I loved the song. He is creative, fast, kind, and a hard working singer with a flawless voice. I reeeaaalllyy recommend him."</p>
-            <p class="mb-4">- Client on fiverr.com</p>
-            <a href="https://www.fiverr.com/stevenhorkey" target="_blank">
-              <button class="btn btn-primary p-3">View all Reviews on FIVERR</button>
-            </a>
-          </div>
-        </div>
-      </div> -->
-
-      
-
-      <!-- <h2 class="text-center w-100 mb-5">PROJECTS</h2> -->
-
       <!-- Project One Row -->
       <div class="row bg-black justify-content-center no-gutters mb-4 mb-lg-0 box-shadow">
         
@@ -190,21 +169,23 @@
             <div class="embed-responsive embed-responsive-16by9">
               <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eRMYMQZ1Vy0" allowfullscreen></iframe> -->
               <div class='onq-youtube-player' data-id='eRMYMQZ1Vy0' data-width='640' data-height='460' data-ssv='false' data-spc='true' data-sta='false' data-afs='true' data-dkc='false' data-ecc='false' data-eap='false'>
-                <img src='/img/sing_video.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;top:0;'>
+                <!-- <img src='/img/sing_video.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;top:0;'> -->
+                <picture >
+                  <source srcset="/img/web_p_images/sing_video.webp" type="image/webp">
+                  <source srcset="/img/sing_video.jpg" type="image/jpeg"> 
+                  <img src="/img/sing_video.jpg" alt="Steven Horkey singing powerful vocals" style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;top:0;'>
+                </picture>
                 <div style='height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("/img/playbutton.png") no-repeat; background-size: 72px;'></div>
              </div>
             </div>
-
-            
-
           </div>
         </div>
         <div class="col-lg-5">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left text-white">
-                <h4 class="mb-4">Your Vocalist</h4>
-                <p class="mb-3"></p>
+                <h4 class="mb-4">Powerful Vocals</h4>
+                <p class="mb-3">I specialize in rock, blues, folk, singer-songwriter, and pop vocals. In addition to singing, I can also write original lyrics and melodies for your song. Unless we arrange for me to mix the recordings into your song, you will receive the unprocessed vocal tracks.</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
@@ -215,17 +196,17 @@
       <div class="row mt-3 mb-5">
         <div class="col-12">
           <!-- <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/690074988&color=%23f19f4d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" class="box-shadow"></iframe> -->
-          <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/749672460&color=%23f19f4d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+          <iframe id='vocal_sc_embed' width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/749672460&color=%23f19f4d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
         </div>
       </div>
 
       <div class="row align-items-center mb-4 mb-lg-5 pb-5 testimonials">
-          <h2 class="text-center w-100 mb-4">TESTIMONIALS</h2>
+          <h2 class="text-center w-100 mb-4 text-uppercase">Reviews</h2>
           <div class="col-md-12 col-lg-4">
             <div class="card" data-aos="flip-up">
               <p class="mx-auto">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
               <p>Brilliant! You can tell Steven immersed himself into the project. Not a tentative moment in the whole track. Absolutely CRUSHED it. Thank you!</p>
-              <p>- Happy client</p>
+              <p>- Casey</p>
             </div>
           </div>
           <div class="col-md-12 col-lg-4">
@@ -252,7 +233,12 @@
             <div class="embed-responsive embed-responsive-16by9">
               <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OPwMQk226_Y" allowfullscreen></iframe> -->
               <div class='onq-youtube-player' data-id='OPwMQk226_Y' data-width='640' data-height='660' data-ssv='false' data-spc='true' data-sta='false' data-afs='true' data-dkc='false' data-ecc='false' data-eap='false'>
-                <img src='/img/guitar_video.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;top:0;'>
+                <!-- <img src='/img/guitar_video.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;top:0;'> -->
+                <picture>
+                  <source srcset="/img/web_p_images/guitar_video.webp" type="image/webp">
+                  <source srcset="/img/guitar_video.jpg" type="image/jpeg"> 
+                  <img src="/img/guitar_video.jpg" alt="Steven Horkey playing a guitar solo." style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;top:0;'>
+                </picture>
                 <div style='height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("/img/playbutton.png") no-repeat; background-size: 72px;'></div>
              </div>
             </div>
@@ -262,8 +248,8 @@
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">Your Guitarist</h4>
-                <p class="text-white">Are you looking </p>
+                <h4 class="text-white">Soulful Guitar</h4>
+                <p class="text-white">After playing guitar and engineering music over the past decade, I know we can create an awesome track for your song. Between the electric guitar, acoustic guitar, and lap steel, we can add in souring leads, soft finger-picking, ambient slide, and anything in between.</p>
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
             </div>
@@ -275,6 +261,124 @@
         <div class="col-12">
           <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/749676456&color=%23f19f4d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
         </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-10 mx-auto">
+            <!-- <h2 class="text-center mb-4">FAQ</h2> -->
+            <h2 class="text-center w-100 mb-4 text-uppercase">FAQ</h2>
+            <div id="accordion">
+              <!--  -->
+              <div class="card">
+                <div class="card-header" id="faq-1">
+                  <h5 class="mb-0">
+                    <div class="" data-toggle="collapse" data-target="#faq-1-target" aria-expanded="false" aria-controls="collapseOne">
+                        What genres and styles do you work with?
+                    </div>
+                  </h5>
+                </div>
+                <div id="faq-1-target" class="collapse" aria-labelledby="faq-1" data-parent="#accordion">
+                  <div class="card-body">
+                    All kinds of rock, R&B/soul, blues, folk, pop and many more! I am very versatile when it comes to vocals, range, and dynamics, but if you are looking for a particularly high range voice outside of falsetto, then you may want to look elsewhere. Feel free to contact me with more information about your song to make sure that we are the right fit.
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="card">
+                <div class="card-header" id="faq-2">
+                  <h5 class="mb-0">
+                    <div class="" data-toggle="collapse" data-target="#faq-2-target" aria-expanded="false" aria-controls="collapseOne">
+                        How do royalties and credit work for the songs you work on?
+                    </div>
+                  </h5>
+                </div>
+                <div id="faq-2-target" class="collapse" aria-labelledby="faq-2" data-parent="#accordion">
+                  <div class="card-body">
+                    All royalties belong to you. If it's a cover song, you are responsible for handling any outside royalties or legal matters on your own. As for credit, check with me on a song-by-song basis. 
+                  </div>
+                </div>
+              </div>
+        
+              <div class="card">
+                <div class="card-header" id="faq-3">
+                  <h5 class="mb-0">
+                    <div class="" data-toggle="collapse" data-target="#faq-3-target" aria-expanded="false" aria-controls="collapseOne">
+                        What if I need my song ready by a specific date?
+                    </div>
+                  </h5>
+                </div>
+                <div id="faq-3-target" class="collapse" aria-labelledby="faq-3" data-parent="#accordion">
+                  <div class="card-body">
+                    Usually, this is perfectly fine! I can work with you to make sure that your song is ready whenever you need it. In your order form, let me know what the timeline is, and we can arrange the delivery accordingly. Keep in mind that I am on Mountain Standard Time (Phoenix, AZ USA).
+                  </div>
+                </div>
+              </div>
+        
+              <div class="card">
+                <div class="card-header" id="faq-4">
+                  <h5 class="mb-0">
+                    <div class="" data-toggle="collapse" data-target="#faq-4-target" aria-expanded="false" aria-controls="collapseOne">
+                        What if my song has explicit lyrics or content?
+                    </div>
+                  </h5>
+                </div>
+                <div id="faq-4-target" class="collapse" aria-labelledby="faq-4" data-parent="#accordion">
+                  <div class="card-body">
+                      Usually not a problem at all, but I find that this is best approached on a song-by-song basis. Contact me with your ideas and the lyrics or content in question, and we can figure out the best way to proceed.
+                  </div>
+                </div>
+              </div>
+        
+              <div class="card">
+                <div class="card-header" id="faq-5">
+                  <h5 class="mb-0">
+                    <div class="" data-toggle="collapse" data-target="#faq-5-target" aria-expanded="false" aria-controls="collapseOne">
+                        What if I want something changed on the tracks you deliver?
+                    </div>
+                  </h5>
+                </div>
+                <div id="faq-5-target" class="collapse" aria-labelledby="faq-5" data-parent="#accordion">
+                  <div class="card-body">
+                    Simply put: I will work on your song until you are 110% satisfied. I have an unlimited revisions policy because I want to ensure you that you will walk away happy with the final product. 
+                  </div>
+                </div>
+              </div>
+        
+              <div class="card">
+                <div class="card-header" id="faq-6">
+                  <h5 class="mb-0">
+                    <div class="" data-toggle="collapse" data-target="#faq-6-target" aria-expanded="false" aria-controls="collapseOne">
+                        What equipment do you record with?
+                    </div>
+                  </h5>
+                </div>
+                <div id="faq-6-target" class="collapse" aria-labelledby="faq-6" data-parent="#accordion">
+                  <div class="card-body">
+                      For guitar, I utilize a custom-built "vintage modern" Stratocaster, a high-end Yamaha steel-string acoustic, and a Gretch lap steel. I run them through vintage-style and contemporary Marshall amps along with a combination of analog and digital effects.
+                      <br/>
+                      <br/>
+                      For vocals, I use professional Shure Microphones along with Mackie preamps and run everything through Logic Pro X with both stock and premium plugins. 
+                  </div>
+                </div>
+              </div>
+        
+              <div class="card">
+                <div class="card-header" id="faq-7">
+                  <h5 class="mb-0">
+                    <div class="" data-toggle="collapse" data-target="#faq-7-target" aria-expanded="false" aria-controls="collapseOne">
+                        I can't find something that I'm looking for on your site.
+                    </div>
+                  </h5>
+                </div>
+                <div id="faq-7-target" class="collapse" aria-labelledby="faq-7" data-parent="#accordion">
+                  <div class="card-body">
+                    No worries - if you have any questions AT ALL, don't hesitate to send me a message and I will get back to you as soon as possible. I am very flexible with orders and want to make sure your specific needs are met. 
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
       </div>
       
 
@@ -363,7 +467,7 @@
 
               <div class="row text-black services d-flex justify-content-center">
                 <div class="col-md-4 col-lg-3 service-item">
-                 <div class="card mt-0 text-black">
+                 <div class="card my-0 text-black">
                     <i class="fas fa-sliders-h"></i>
                     <h3 class="my-3 font-weight-bolder">$15</h3>
                     <p>Mix and master a single track with your file of choice</p>
@@ -371,7 +475,7 @@
                  </div>
                 </div>
                 <div class="col-md-4 col-lg-3 service-item">
-                 <div class="card mt-0">
+                 <div class="card my-0">
                     <i class="fas fa-sliders-h"></i>
                     <h3 class="my-3 font-weight-bolder">$40</h3>
                     <p>Add a Polished Mix and Master of Your Entire Song</p>
@@ -379,9 +483,9 @@
                  </div>
                 </div>
                 <div class="col-md-4 col-lg-3 service-item">
-                    <div class="card mt-0">
+                    <div class="card my-0">
                         <i class="fas fa-video"></i>
-                        <h3 class="my-3 font-weight-bolder">$20</h3>
+                        <h3 class="my-3 font-weight-bolder">$25</h3>
                         <p>Add a HD Video Recording of My Performance</p>
                         <small>Video Editing Not Included But Can Be Done. Contact for more details</small>
                      </div>
@@ -449,7 +553,7 @@
         <div class="col-lg-8 mx-auto py-5">
           
           <div class="p-copy">
-              <h2 class="text-center mb-5">Why Hire Me?</h2>
+              <h2 class="text-center mb-5 text-uppercase">Why Hire Me?</h2>
             <p>I get it, I've hired session musicians before, and it can be a hit-or-miss process. Some are excellent players and communicators, and others not so much. 
             </p>
             <p>The sound of some performers fit with a project, and others don't - that's just the nature of art. But even before that, what's just as important is whether or not the performer gives their 100% to the music and is doing so from the right place.
@@ -478,9 +582,14 @@
             <p class="text-center">Steven Horkey</p>
           </div>
         </div>
+
       </div>
     </div>
+
+    
   </section>
+
+  
 
   <section class="newsletter-section">
     <div class="container text-center">
@@ -489,7 +598,7 @@
       <div id="mc_embed_signup">
       <form action="https://gmail.us20.list-manage.com/subscribe/post?u=9206f8531d264af167f251ce6&amp;id=a7e6806ea9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
-        <label for="mce-EMAIL">Keep in touch, receive exclusive deals, and take $10 off your first order</la>
+        <label for="mce-EMAIL mb-0">Keep in touch, receive exclusive deals, and take $10 off your first order</la>
         <input type="email" value="" name="EMAIL" class="form-control email d-block mx-auto my-3" id="mce-EMAIL" placeholder="email address" required>
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9206f8531d264af167f251ce6_a7e6806ea9" tabindex="-1" value=""></div>
@@ -505,7 +614,7 @@
 
 
   <!-- Signup Section -->
-  <section id="start" class="signup-section">
+  <section id="contact" class="signup-section">
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 mx-auto text-center">
@@ -514,7 +623,7 @@
           <h3 class="text-white text-uppercase mb-5">Have a project in mind? Let's get started.</h3>
           <button id="initVocals" class="btn btn-primary mb-5 text-black mx-1" style="padding:1.25rem 1rem;">Start A Vocals Project</button>
           <button id="initGuitar" class="btn btn-primary mb-5 text-black mx-1" style="padding:1.25rem 1rem;">Start A Guitar Project</button>
-          <div id="contact" ></div>
+          <div id="" ></div>
           <!-- <p class="text-white">If you are here and reading this, then my guess is that you want something special to come through on your song. My goal, with all the music I do, is to end up with a track that expresses the most passion and depth possible. If that interests you, let's get started...</p> -->
           <h3 class="text-white mb-4 text-uppercase">Question instead? Shoot me a message...</h3>
 
