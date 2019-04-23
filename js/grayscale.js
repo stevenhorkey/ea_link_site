@@ -11,6 +11,49 @@ function openOrderModal(type){
   $("#order-form").attr('name',type);
 }
 
+function submitForm(whichForm){
+  // send form response to email
+  // e.preventDefault();
+  var $form = $('#'+whichForm);
+  var $data = JSON.parse(JSON.stringify($form.serializeArray()));
+  $form.find("button[type='submit']").prop('disabled',true);
+
+  var message = "New " + whichForm + " submission...\n\n\n";
+  $data.forEach(function(field){
+    message += field.name + ': ' + field.value + '\n\n';
+  });
+
+  // console.log($form, message);
+
+  var data = {
+    message: message,
+    sendTo: "music@stevenhorkey.com",
+    subject: "New Session " + whichForm + " submission"
+  };
+  $.post('http://34.192.131.39/api/sendEmail',data, function(res){
+    console.log(res);
+    if(res === 'success'){
+      var formResponse = $('<div class="bg-success p-3 mx-auto my-3 round text-center">Submission Successful</div>');
+      formResponse.insertAfter(submitButton);
+      $form[0].reset();
+    } 
+    else {
+      var formResponse = $('<div class="bg-danger p-3 mx-auto my-3 text-white round text-center">Error. Email directly at music@stevenhorkey.com</div>');
+      formResponse.insertAfter(submitButton);
+      alert('Sorry, there was an error in submitting your form. Please email me directly at music@stevenhorkey.com');
+    }
+  });
+  $form[0].reset();
+  var submitButton = $form.find("button[type='submit']");
+  submitButton.prop('disabled',false);
+
+  // setTimeout(function(){
+  //   formReponse.fadeOut('slow');
+  // },5000);
+  
+  return false;
+}
+
 function loadDrift(){
   !function() {
     var t = window.driftt = window.drift = window.driftt || [];
@@ -44,6 +87,8 @@ function deleteDrift(){
   "use strict"; // Start of use strict
 
   AOS.init();
+
+
 
   $("#initVocals").click(function(){openOrderModal('vocals')});
   $("#initGuitar").click(function(){openOrderModal('guitar')});

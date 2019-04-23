@@ -533,6 +533,14 @@ a:focus, a:hover {
   background-color: #161616 !important;
 }
 
+.bg-success {
+  background-color: #89dc9c !important;
+}
+
+.bg-danger {
+  background-color: #d26e78 !important;
+}
+
 .bg-primary {
   background-color: #F19F4D !important;
 }

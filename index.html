@@ -596,7 +596,7 @@
                 <form action="https://gmail.us20.list-manage.com/subscribe/post?u=9206f8531d264af167f251ce6&amp;id=a7e6806ea9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
                         <label for="mce-EMAIL mb-0">Keep in touch, receive exclusive deals, and take $10 off your first order</la>
-                            <input type="email" value="" name="EMAIL" class="form-control email d-block mx-auto my-3" id="mce-EMAIL" placeholder="email address" required>
+                            <input type="email" value=""  name="EMAIL" class="form-control email d-block mx-auto my-3" id="mce-EMAIL" placeholder="email address" required>
                             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                             <div style="position: absolute; left: -5000px;" aria-hidden="true">
                                 <input type="text" name="b_9206f8531d264af167f251ce6_a7e6806ea9" tabindex="-1" value="">
@@ -627,7 +627,7 @@
                     <!-- <p class="text-white">If you are here and reading this, then my guess is that you want something special to come through on your song. My goal, with all the music I do, is to end up with a track that expresses the most passion and depth possible. If that interests you, let's get started...</p> -->
                     <h3 class="text-white mb-4 text-uppercase">Question instead? Shoot me a message...</h3>
 
-                    <form class="form-inline d-block" name="contact" method="POST" data-netlify="true">
+                    <form class="form-inline d-block" id="contact_form" onsubmit="return submitForm('contact_form');">
                         <div class="row px-3">
                             <input name="name" type="text" class="col-12 form-control flex-fill mx-1  mb-3" id="inputName" placeholder="Enter your name...">
                             <input name="email" type="email" class="col-12 form-control flex-fill mx-1  mb-3" id="inputEmail" placeholder="Enter email address...">
@@ -657,7 +657,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="order-form" class="form-inline d-block" name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <form id="order-form" class="form-inline d-block" onsubmit="return submitForm('order-form');">
                         <p class="d-none">
                             <label>Don’t fill this out if you're human:
                                 <input name="bot-field" />
@@ -691,13 +691,13 @@
                         <p class="font-italic mb-4 text-center font-weight-bolder">Which Package are You Interested In?</p>
                         <div class="row mb-5 px-3">
                             <div>
-                                <input name="aware_of_paypal" type="radio" required/>
+                                <input name="basic_package" type="radio"/>
                                 <label class="d-inline">Basic Package (50$)</label>
                             </div>
                         </div>
                         <div class="row mb-5 px-3">
                             <div>
-                                <input name="aware_of_paypal" type="radio" required/>
+                                <input name="premium_package" type="radio"/>
                                 <label class="d-inline">Premium Package (100$)</label>
                             </div>
                         </div>
@@ -705,19 +705,19 @@
 
                         <div class="row mb-5 px-3">
                             <div>
-                                <input name="aware_of_paypal" type="checkbox" required/>
+                                <input name="mix_master_basic" type="checkbox"/>
                                 <label class="d-inline">Mix and Master of Song with Basic Package ($15)</label>
                             </div>
                         </div>
                         <div class="row mb-5 px-3">
                             <div>
-                                <input name="aware_of_paypal" type="checkbox" required/>
+                                <input name="full_mix_master" type="checkbox"/>
                                 <label class="d-inline">Mix and Master of Entire Song ($40)</label>
                             </div>
                         </div>
                         <div class="row mb-5 px-3">
                             <div>
-                                <input name="aware_of_paypal" type="checkbox" required/>
+                                <input name="video_requested" type="checkbox"/>
                                 <label class="d-inline">Video Recording of Performance ($20)</label>
                             </div>
                         </div>
