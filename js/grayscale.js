@@ -30,20 +30,42 @@ function submitForm(whichForm){
     sendTo: "music@stevenhorkey.com",
     subject: "New Session " + whichForm + " submission"
   };
-  $.post('https://sessionsbysteven.herokuapp.com/api/sendEmail',data, function(res){
-    console.log(res);
-    if(res === 'success'){
-      var formResponse = $('<div class="bg-success p-3 mx-auto my-3 round text-center">Submission Successful</div>');
+  // $.post('https://sessionsbysteven.herokuapp.com/api/sendEmails',data, function(res){
+  //   console.log(res);
+  //   if(res === 'success'){
+  //     $(".form-response").remove();
+  //     var formResponse = $('<div class="bg-success p-3 mx-auto my-3 round text-center form-response">Submission Successful</div>');
+  //     formResponse.insertAfter(submitButton);
+  //     $form[0].reset();
+  //   } 
+  //   else {
+  //     var formResponse = $('<div class="bg-danger p-3 mx-auto my-3 text-white round text-center">Error. Email directly at music@stevenhorkey.com</div>');
+  //     formResponse.insertAfter(submitButton);
+  //     alert('Sorry, there was an error in submitting your form. Please email me directly at music@stevenhorkey.com');
+  //   }
+  // });
+
+  $.ajax({
+    type: "POST",
+    url: "https://sessionsbysteven.herokuapp.com/api/sendEmail",
+    data: data,
+    success: function(msg){
+      $(".form-response").remove();
+      var formResponse = $('<div class="bg-success p-3 mx-auto my-3 round text-center form-response">Submission Successful</div>');
       formResponse.insertAfter(submitButton);
       $form[0].reset();
-    } 
-    else {
-      var formResponse = $('<div class="bg-danger p-3 mx-auto my-3 text-white round text-center">Error. Email directly at music@stevenhorkey.com</div>');
+      setTimeout(function(){
+        $(".form-response").fadeOut();
+      }, 5000)
+    },
+    error: function(XMLHttpRequest, textStatus, errorThrown) {
+      var formResponse = $('<div class="bg-danger p-3 mx-auto my-3 text-white round text-center">Error. Please email me directly at <a href="mailto:music@stevenhorkey.com">music@stevenhorkey.com</a></div>');
       formResponse.insertAfter(submitButton);
-      alert('Sorry, there was an error in submitting your form. Please email me directly at music@stevenhorkey.com');
+      // alert('Sorry, there was an error in submitting your form. Please email me directly at <a href="mailto:music@stevenhorkey.com">music@stevenhorkey.com</a>')
     }
   });
-  $form[0].reset();
+
+  // $form[0].reset();
   var submitButton = $form.find("button[type='submit']");
   submitButton.prop('disabled',false);
 
