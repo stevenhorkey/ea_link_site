@@ -30,7 +30,7 @@ function submitForm(whichForm){
     sendTo: "music@stevenhorkey.com",
     subject: "New Session " + whichForm + " submission"
   };
-  $.post('http://34.192.131.39/api/sendEmail',data, function(res){
+  $.post('https://calm-fortress-14581.herokuapp.com/api/sendEmail',data, function(res){
     console.log(res);
     if(res === 'success'){
       var formResponse = $('<div class="bg-success p-3 mx-auto my-3 round text-center">Submission Successful</div>');
