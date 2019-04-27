@@ -7,7 +7,8 @@ function setHeight(jq_in){
 
 function openOrderModal(type){
   $("#orderModal").modal('show');
-  $("#order-form-title").html('Order Form: ' + type);
+  if(type !== 'demo')  $("#order-form-title").html('Order Form: ' + type);
+  else $("#order-form-title").html('Order Form');
   $("#order-form").attr('name',type);
 }
 
@@ -15,8 +16,9 @@ function submitForm(whichForm){
   // send form response to email
   // e.preventDefault();
   var $form = $('#'+whichForm);
+  var submitButton = $form.find("button[type='submit']");
   var $data = JSON.parse(JSON.stringify($form.serializeArray()));
-  $form.find("button[type='submit']").prop('disabled',true);
+  submitButton.prop('disabled',true);
 
   var message = "New " + whichForm + " submission...\n\n\n";
   $data.forEach(function(field){
@@ -66,7 +68,7 @@ function submitForm(whichForm){
   });
 
   // $form[0].reset();
-  var submitButton = $form.find("button[type='submit']");
+  
   submitButton.prop('disabled',false);
 
   // setTimeout(function(){
@@ -114,6 +116,7 @@ function deleteDrift(){
 
   $("#initVocals").click(function(){openOrderModal('vocals')});
   $("#initGuitar").click(function(){openOrderModal('guitar')});
+  $("#initDemo").click(function(){openOrderModal('demo')});
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
