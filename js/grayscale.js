@@ -30,7 +30,7 @@ function submitForm(whichForm){
 
   var data = {
     message: message,
-    sendTo: "music@stevenhorkey.com",
+    sendTo: "steven@sessionsongs.com",
     subject: "New Session " + whichForm + " submission"
   };
   // $.post('https://sessionsbysteven.herokuapp.com/api/sendEmails',data, function(res){
@@ -42,9 +42,9 @@ function submitForm(whichForm){
   //     $form[0].reset();
   //   } 
   //   else {
-  //     var formResponse = $('<div class="bg-danger p-3 mx-auto my-3 text-white round text-center">Error. Email directly at music@stevenhorkey.com</div>');
+  //     var formResponse = $('<div class="bg-danger p-3 mx-auto my-3 text-white round text-center">Error. Email directly at steven@sessionsongs.com</div>');
   //     formResponse.insertAfter(submitButton);
-  //     alert('Sorry, there was an error in submitting your form. Please email me directly at music@stevenhorkey.com');
+  //     alert('Sorry, there was an error in submitting your form. Please email me directly at steven@sessionsongs.com');
   //   }
   // });
 
@@ -66,9 +66,9 @@ function submitForm(whichForm){
       }, 4000)
     },
     error: function(XMLHttpRequest, textStatus, errorThrown) {
-      var formResponse = $('<div class="bg-danger p-3 mx-auto my-3 text-white round text-center">Error. Please email me directly at <a href="mailto:music@stevenhorkey.com">music@stevenhorkey.com</a></div>');
+      var formResponse = $('<div class="bg-danger p-3 mx-auto my-3 text-white round text-center">Error. Please email me directly at <a href="mailto:steven@sessionsongs.com">steven@sessionsongs.com</a></div>');
       formResponse.insertAfter(submitButton);
-      // alert('Sorry, there was an error in submitting your form. Please email me directly at <a href="mailto:music@stevenhorkey.com">music@stevenhorkey.com</a>')
+      // alert('Sorry, there was an error in submitting your form. Please email me directly at <a href="mailto:steven@sessionsongs.com">steven@sessionsongs.com</a>')
     }
   });
 
