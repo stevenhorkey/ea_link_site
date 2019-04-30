@@ -19,6 +19,7 @@ function submitForm(whichForm){
   var submitButton = $form.find("button[type='submit']");
   var $data = JSON.parse(JSON.stringify($form.serializeArray()));
   submitButton.prop('disabled',true);
+  submitButton.html('Submitting. Please Wait...');
 
   var message = "New " + whichForm + " submission...\n\n\n";
   $data.forEach(function(field){
@@ -53,12 +54,16 @@ function submitForm(whichForm){
     data: data,
     success: function(msg){
       $(".form-response").remove();
-      var formResponse = $('<div class="bg-success p-3 mx-auto my-3 round text-center form-response">Submission Successful</div>');
-      formResponse.insertAfter(submitButton);
+      // var formResponse = $('<div class="bg-success p-3 mx-auto my-3 round text-center form-response">Submission Successful</div>');
+      // formResponse.insertAfter(submitButton);
       $form[0].reset();
+      submitButton.html('Submission Successful');
+
       setTimeout(function(){
         $(".form-response").fadeOut();
-      }, 5000)
+        submitButton.html('Submit Another Form');
+
+      }, 4000)
     },
     error: function(XMLHttpRequest, textStatus, errorThrown) {
       var formResponse = $('<div class="bg-danger p-3 mx-auto my-3 text-white round text-center">Error. Please email me directly at <a href="mailto:music@stevenhorkey.com">music@stevenhorkey.com</a></div>');
@@ -76,6 +81,18 @@ function submitForm(whichForm){
   // },5000);
   
   return false;
+}
+
+function formatAMPM(date) {
+  // from stack overflow - bbrame
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = hours + ':' + minutes + ' ' + ampm;
+  return strTime;
 }
 
 function loadDrift(){
@@ -111,8 +128,9 @@ function deleteDrift(){
   "use strict"; // Start of use strict
 
   AOS.init();
+  $("#mstime").html(formatAMPM(new Date));
 
-
+  
 
   $("#initVocals").click(function(){openOrderModal('vocals')});
   $("#initGuitar").click(function(){openOrderModal('guitar')});
