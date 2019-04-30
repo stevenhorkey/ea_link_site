@@ -209,7 +209,7 @@ function deleteDrift(){
         });
       });
       $(".nav-tagline").hide();
-      loadDrift();
+      // loadDrift();
     }
   }).resize();
 
