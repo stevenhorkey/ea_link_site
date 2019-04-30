@@ -61,7 +61,7 @@ function submitForm(whichForm){
 
       setTimeout(function(){
         $(".form-response").fadeOut();
-        submitButton.html('Submit Another Form');
+        submitButton.html('Submit Another');
 
       }, 4000)
     },
