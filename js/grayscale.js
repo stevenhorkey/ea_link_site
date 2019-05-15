@@ -132,9 +132,10 @@ function deleteDrift(){
 
   
 
-  $("#initVocals").click(function(){openOrderModal('vocals')});
-  $("#initGuitar").click(function(){openOrderModal('guitar')});
-  $("#initDemo").click(function(){openOrderModal('demo')});
+  // $("#initVocals").click(function(){openOrderModal('vocals')});
+  // $("#initGuitar").click(function(){openOrderModal('guitar')});
+  // $("#initDemo").click(function(){openOrderModal('demo')});
+  $(".initOrder").click(function(){openOrderModal('order')});
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
