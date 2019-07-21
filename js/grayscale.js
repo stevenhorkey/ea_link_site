@@ -190,18 +190,18 @@ function deleteDrift(){
       })
       $(".nav-tagline").hide();
 
-      $(".navbar-brand").html('Session Songs<br/><small style="font-size:13px;" class="d-block">Professional Guitar <br/>& Vocal Tracks</small>');
-      $(".navbar-brand").css('font-size','20px');
+      // $(".navbar-brand").html('Session Songs<br/><small style="font-size:13px;" class="d-block">Professional Guitar <br/>& Vocal Tracks</small>');
+      // $(".navbar-brand").css('font-size','20px');
     } else if (windowsize < 992){
-      $(".nav-tagline").show();
-      $(".navbar-brand").html('Session Songs');
+      // $(".nav-tagline").show();
+      // $(".navbar-brand").html('Session Songs');
     } else{
       $("body").css({
         'padding-top': '0px'
       });
       console.log("this big")
       $(".nav-tagline").hide();
-      $(".navbar-brand").html('Session Songs<br/><small class="d-block">Professional Guitar <br/>& Vocal Tracks</small>');
+      // $(".navbar-brand").html('Session Songs<br/><small class="d-block">Professional Guitar <br/>& Vocal Tracks</small>');
       $("#drift-widget").show();
       $(".project-text").each(function(){
         var vidHeight = $(".embed-responsive-item").outerHeight();
