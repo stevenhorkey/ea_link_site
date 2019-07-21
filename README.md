@@ -1,1 +1,1 @@
-Session Site - Static
+# ea-static
