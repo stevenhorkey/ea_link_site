@@ -1,3 +1,5 @@
+// Youtube = https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC_LeagWn1clfNskUl8J4fFg&maxResults=10&order=date&type=video&key=AIzaSyBHxYD243TlGIVbEP__9g2qcJI0obT8kRE
+
 function setHeight(jq_in){
   jq_in.each(function(index, elem){
       // This line will work with pure Javascript (taken from NicB's answer):
@@ -30,8 +32,8 @@ function submitForm(whichForm){
 
   var data = {
     message: message,
-    sendTo: "steven@sessionsongs.com",
-    subject: "New Session " + whichForm + " submission"
+    sendTo: "everythinginallonline@gmail.com",
+    subject: "New Contact Form Submission:\n";
   };
   // $.post('https://sessionsbysteven.herokuapp.com/api/sendEmails',data, function(res){
   //   console.log(res);
@@ -83,6 +85,37 @@ function submitForm(whichForm){
   return false;
 }
 
+function displayVideo(id, target, col){
+
+  var video = "<div class='"+col+" mb-5'><div class='video-container'><div class='onq-youtube-player' style='' data-id='"+id+"' data-width='640' data-height='360' data-ssv='false' data-spc='false' data-sta='false' data-afs='false' data-dkc='false' data-ecc='false' data-eap='false'><img src='https://i.ytimg.com/vi/"+id+"/maxresdefault.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;'><div style='height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url('https://www.onqmarketing.com.au/wp-content/plugins/onq-youtube-embed-generator/playbutton.png') no-repeat; background-size: 72px;'></div></div></div></div>";
+
+  $("#"+target).append(video);
+  console.log(video)
+  prepareVideo();
+}
+
+function fetchYouTubeContent() {
+  $.get("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC_LeagWn1clfNskUl8J4fFg&maxResults=10&order=date&type=video&key=AIzaSyBHxYD243TlGIVbEP__9g2qcJI0obT8kRE")
+    .done(function(res) {
+      console.log(res.items);
+      var videos = res.items;
+      var count = 0;
+      videos.slice(0,3).forEach(function(video){
+        console.log(video);
+        if(count === 0) displayVideo(video.id.videoId, "featured-video", "col-12");
+        else displayVideo(video.id.videoId, "videos", "col-sm-6 col-12");
+        count++;
+        console.log(count);
+      });
+    })
+    .fail(function(err) {
+      console.log( "error" );
+    })
+    .always(function(res) {
+      console.log(res);
+    });
+}
+
 function formatAMPM(date) {
   // from stack overflow - bbrame
   var hours = date.getHours();
@@ -124,11 +157,18 @@ function deleteDrift(){
   $("#drift-widget-container").remove();
 }
 
+function prepareVideo(){
+    // ONQ Marketing Youtube Code
+  !function(){for(var t=document.getElementsByClassName("onq-youtube-player"),e=0;e<t.length;e++)t[e].onclick=function(){var t=document.createElement("iframe"),e="true"==this.dataset.ssv?"1":"0",s="true"==this.dataset.spc?"1":"0",i="true"==this.dataset.sta?"1":"0",a="true"==this.dataset.dkc?"1":"0",r="true"==this.dataset.ecc?"1":"0",o="true"==this.dataset.eap?"1":"0";for(t.setAttribute("src","//www.youtube.com/embed/"+this.dataset.id+"?rel="+e+"&controls="+s+"&showinfo="+i+"&disablekb="+a+"&cc_load_policy="+r+"&autoplay="+o),t.setAttribute("frameborder","0"),t.setAttribute("id","youtube-iframe"),t.setAttribute("style","width: 100%; height: 100%; position: absolute; top: 0; left: 0;"),"true"==this.dataset.afs&&t.setAttribute("allowfullscreen","");this.firstChild;)this.removeChild(this.firstChild);this.appendChild(t)}}(); 
+}
+
 (function($) {
   "use strict"; // Start of use strict
 
   AOS.init();
   $("#mstime").html(formatAMPM(new Date));
+
+  fetchYouTubeContent();
 
   
 
