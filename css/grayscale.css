@@ -71,7 +71,7 @@ html {
   }
   #mainNav .navbar-brand {
     padding: .5rem 0;
-    color: #fff;
+    color: black;
     margin-bottom: 3px;
   }
   #mainNav .nav-link {
@@ -79,7 +79,7 @@ html {
     transition: none;
     padding: 2rem 1.5rem;
     color: rgba(255, 255, 255, 0.5);
-    color: white;
+    color: black;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -97,6 +97,7 @@ html {
   #mainNav.navbar-shrink .nav-link {
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
+    color:white;
   }
   #mainNav.navbar-shrink .nav-link:hover {
     color: #88a4ac;
@@ -112,7 +113,7 @@ html {
 }
 
 .navbar-nav .nav-link {
-  color: #fff;
+  color: #000;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
@@ -126,8 +127,8 @@ html {
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("/img/ea/flower.jpeg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("/img/ea/flower.jpeg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("/img/ea/edit_field.png");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("/img/ea/edit_field.png");
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -402,15 +403,15 @@ hr {
   }
 }
 
-.pricing-section {
+.music-section {
   padding: 5rem 0 2rem 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#00000090), to(#16161690)), url("/img/ea/steven_creek.jpeg");
-  background-image: linear-gradient(#00000060, #161616), url("/img/ea/steven_creek.jpeg");
+  background-image: linear-gradient(#00000040, #161616), url("/img/ea/steven_creek.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.pricing-section .pricing-num {
+.music-section .pricing-num {
   font-weight: bolder;
   font-size: 50px;
   margin: 1rem 0 1.5rem 0;
@@ -418,30 +419,30 @@ hr {
   text-align: center;
 }
 
-.pricing-section .table td, .pricing-section .table th {
+.music-section .table td, .music-section .table th {
   vertical-align: middle;
 }
 
-.pricing-section .featured-text {
+.music-section .featured-text {
   padding: 2rem;
 }
 
 @media (min-width: 992px) {
-  .pricing-section .featured-text {
+  .music-section .featured-text {
     padding: 0 0 0 2rem;
     border-left: 0.5rem solid #88a4ac;
   }
 }
 
-.pricing-section .pricing-text {
+.music-section .pricing-text {
   padding: 3rem;
 }
 
 @media (min-width: 992px) {
-  .pricing-section .pricing-text {
+  .music-section .pricing-text {
     padding: 5rem;
   }
-  .pricing-section .pricing-text hr {
+  .music-section .pricing-text hr {
     border-color: #88a4ac;
     border-width: .25rem;
     width: 30%;
@@ -588,7 +589,7 @@ a {
 
 a:focus, a:hover {
   text-decoration: none;
-  color: #c86c10;
+  color: #d26e78;
 }
 
 .round {

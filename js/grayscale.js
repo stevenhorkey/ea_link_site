@@ -32,8 +32,8 @@ function submitForm(whichForm){
 
   var data = {
     message: message,
-    sendTo: "everythinginallonline@gmail.com",
-    subject: "New Contact Form Submission:\n";
+    sendTo: "stevenhorkey@gmail.com",
+    subject: "New Contact Form Submission:\n"
   };
   // $.post('https://sessionsbysteven.herokuapp.com/api/sendEmails',data, function(res){
   //   console.log(res);
@@ -52,10 +52,11 @@ function submitForm(whichForm){
 
   $.ajax({
     type: "POST",
-    url: "https://sessionsbysteven.herokuapp.com/api/sendEmail",
+    url: "https://formspree.io/everythinginallonline@gmail.com",
     data: data,
     success: function(msg){
       $(".form-response").remove();
+      console.log(msg);
       // var formResponse = $('<div class="bg-success p-3 mx-auto my-3 round text-center form-response">Submission Successful</div>');
       // formResponse.insertAfter(submitButton);
       $form[0].reset();
@@ -87,7 +88,7 @@ function submitForm(whichForm){
 
 function displayVideo(id, target, col){
 
-  var video = "<div class='"+col+" mb-5'><div class='video-container'><div class='onq-youtube-player' style='' data-id='"+id+"' data-width='640' data-height='360' data-ssv='false' data-spc='false' data-sta='false' data-afs='false' data-dkc='false' data-ecc='false' data-eap='false'><img src='https://i.ytimg.com/vi/"+id+"/maxresdefault.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;'><div style='height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url('https://www.onqmarketing.com.au/wp-content/plugins/onq-youtube-embed-generator/playbutton.png') no-repeat; background-size: 72px;'></div></div></div></div>";
+  var video = "<div class='"+col+" mb-5'><div class='video-container'><div class='onq-youtube-player' style='' data-id='"+id+"' data-width='640' data-height='360' data-ssv='false' data-spc='false' data-sta='false' data-afs='false' data-dkc='false' data-ecc='false' data-eap='false'><img src='https://i.ytimg.com/vi/"+id+"/maxresdefault.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;'><div style='height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url(/img/ea/playbutton.png) no-repeat; background-size: 72px;'></div></div></div></div>";
 
   $("#"+target).append(video);
   console.log(video)
@@ -100,7 +101,7 @@ function fetchYouTubeContent() {
       console.log(res.items);
       var videos = res.items;
       var count = 0;
-      videos.slice(0,3).forEach(function(video){
+      videos.slice(0,1).forEach(function(video){
         console.log(video);
         if(count === 0) displayVideo(video.id.videoId, "featured-video", "col-12");
         else displayVideo(video.id.videoId, "videos", "col-sm-6 col-12");
