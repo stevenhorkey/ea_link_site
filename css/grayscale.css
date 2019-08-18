@@ -10,100 +10,100 @@ html {
 
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-Black.eot');
-  src: url('Lato-Black.eot?#iefix') format('embedded-opentype'),
-      url('Lato-Black.woff2') format('woff2'),
-      url('Lato-Black.woff') format('woff');
+  src: url('../fonts/Lato/Lato-Black.eot');
+  src: url('../fonts/Lato/Lato-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato/Lato-Black.woff2') format('woff2'),
+      url('../fonts/Lato/Lato-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-LightItalic.eot');
-  src: url('Lato-LightItalic.eot?#iefix') format('embedded-opentype'),
-      url('Lato-LightItalic.woff2') format('woff2'),
-      url('Lato-LightItalic.woff') format('woff');
+  src: url('../fonts/Lato/Lato-LightItalic.eot');
+  src: url('../fonts/Lato/Lato-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato/Lato-LightItalic.woff2') format('woff2'),
+      url('../fonts/Lato/Lato-LightItalic.woff') format('woff');
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-Italic.eot');
-  src: url('Lato-Italic.eot?#iefix') format('embedded-opentype'),
-      url('Lato-Italic.woff2') format('woff2'),
-      url('Lato-Italic.woff') format('woff');
+  src: url('../fonts/Lato/Lato-Italic.eot');
+  src: url('../fonts/Lato/Lato-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato/Lato-Italic.woff2') format('woff2'),
+      url('../fonts/Lato/Lato-Italic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-BoldItalic.eot');
-  src: url('Lato-BoldItalic.eot?#iefix') format('embedded-opentype'),
-      url('Lato-BoldItalic.woff2') format('woff2'),
-      url('Lato-BoldItalic.woff') format('woff');
+  src: url('../fonts/Lato/Lato-BoldItalic.eot');
+  src: url('../fonts/Lato/Lato-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato/Lato-BoldItalic.woff2') format('woff2'),
+      url('../fonts/Lato/Lato-BoldItalic.woff') format('woff');
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-BlackItalic.eot');
-  src: url('Lato-BlackItalic.eot?#iefix') format('embedded-opentype'),
-      url('Lato-BlackItalic.woff2') format('woff2'),
-      url('Lato-BlackItalic.woff') format('woff');
+  src: url('../fonts/Lato/Lato-BlackItalic.eot');
+  src: url('../fonts/Lato/Lato-BlackItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato/Lato-BlackItalic.woff2') format('woff2'),
+      url('../fonts/Lato/Lato-BlackItalic.woff') format('woff');
   font-weight: 900;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-Regular.eot');
-  src: url('Lato-Regular.eot?#iefix') format('embedded-opentype'),
-      url('Lato-Regular.woff2') format('woff2'),
-      url('Lato-Regular.woff') format('woff');
+  src: url('../fonts/Lato/Lato-Regular.eot');
+  src: url('../fonts/Lato/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato/Lato-Regular.woff2') format('woff2'),
+      url('../fonts/Lato/Lato-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lato Hairline';
-  src: url('Lato-Hairline.eot');
-  src: url('Lato-Hairline.eot?#iefix') format('embedded-opentype'),
-      url('Lato-Hairline.woff2') format('woff2'),
-      url('Lato-Hairline.woff') format('woff');
+  src: url('../fonts/Lato/Lato-Hairline.eot');
+  src: url('../fonts/Lato/Lato-Hairline.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato/Lato-Hairline.woff2') format('woff2'),
+      url('../fonts/Lato/Lato-Hairline.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-Bold.eot');
-  src: url('Lato-Bold.eot?#iefix') format('embedded-opentype'),
-      url('Lato-Bold.woff2') format('woff2'),
-      url('Lato-Bold.woff') format('woff');
+  src: url('../fonts/Lato/Lato-Bold.eot');
+  src: url('../fonts/Lato/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato/Lato-Bold.woff2') format('woff2'),
+      url('../fonts/Lato/Lato-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lato Hairline';
-  src: url('Lato-HairlineItalic.eot');
-  src: url('Lato-HairlineItalic.eot?#iefix') format('embedded-opentype'),
-      url('Lato-HairlineItalic.woff2') format('woff2'),
-      url('Lato-HairlineItalic.woff') format('woff');
+  src: url('../fonts/Lato/Lato-HairlineItalic.eot');
+  src: url('../fonts/Lato/Lato-HairlineItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato/Lato-HairlineItalic.woff2') format('woff2'),
+      url('../fonts/Lato/Lato-HairlineItalic.woff') format('woff');
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-Light.eot');
-  src: url('Lato-Light.eot?#iefix') format('embedded-opentype'),
-      url('Lato-Light.woff2') format('woff2'),
-      url('Lato-Light.woff') format('woff');
+  src: url('../fonts/Lato/Lato-Light.eot');
+  src: url('../fonts/Lato/Lato-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato/Lato-Light.woff2') format('woff2'),
+      url('../fonts/Lato/Lato-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
@@ -172,7 +172,7 @@ html {
   }
   #mainNav .navbar-brand {
     padding: .5rem 0;
-    color: black;
+    color: white;
     margin-bottom: 3px;
   }
   #mainNav .nav-link {
@@ -180,7 +180,7 @@ html {
     transition: none;
     padding: 2rem 1.5rem;
     color: rgba(255, 255, 255, 0.5);
-    color: black;
+    color: white;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -228,8 +228,8 @@ html {
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("/img/ea/edit_field.png");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("/img/ea/edit_field.png");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("/img/ea/steven_music.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("/img/ea/steven_music.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: scroll;
