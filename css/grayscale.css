@@ -172,7 +172,7 @@ html {
   }
   #mainNav .navbar-brand {
     padding: .5rem 0;
-    color: white;
+    color: black;
     margin-bottom: 3px;
   }
   #mainNav .nav-link {
@@ -180,7 +180,7 @@ html {
     transition: none;
     padding: 2rem 1.5rem;
     color: rgba(255, 255, 255, 0.5);
-    color: white;
+    color: black;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -214,7 +214,14 @@ html {
 }
 
 .navbar-nav .nav-link {
-  color: #000;
+  color: white;
+}
+
+@media only screen and (min-width: 992px) {
+
+.navbar-nav .nav-link {
+  color: black;
+}
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
