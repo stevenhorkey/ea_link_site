@@ -172,7 +172,7 @@ html {
   }
   #mainNav .navbar-brand {
     padding: .5rem 0;
-    color: black;
+    color: white;
     margin-bottom: 3px;
   }
   #mainNav .nav-link {
@@ -180,7 +180,7 @@ html {
     transition: none;
     padding: 2rem 1.5rem;
     color: rgba(255, 255, 255, 0.5);
-    color: black;
+    color: white;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
