@@ -153,8 +153,16 @@ li {
   
 }
 
-li img {
+li img,
+li i {
   margin-left: 6px;
+}
+
+#quote {
+  font-style: italic;
+  line-height: 0.25rem;
+  color: #ffffff99;
+  padding-top:30px;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
