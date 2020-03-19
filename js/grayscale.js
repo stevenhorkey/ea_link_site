@@ -129,6 +129,34 @@ function formatAMPM(date) {
   return strTime;
 }
 
+function mailchimp(){
+  /*  Mailchimp Subscribe  */
+  $('#subscribe-form').bind('submit', function(event) {
+    event.preventDefault(); //prevent page refresh
+    var name  = $('[name="client_name"]').val();//get name field value
+    var email = $('[name="client_email"]').val();//get email field value
+    console.log(name, email);
+    var url =   "https://us19.api.mailchimp.com/2.0/lists/subscribe.json?"
+              +  "apikey=1fd6208879cb1594e3e133fffb60442d-us19id=2ee3c1c90f&c=?"//API KEY  
+              +  "&email[email]=" + email //email address registering
+              +  "&merge_vars[FNAME]=" + name //name we're registering
+              +  "&merge_vars[LNAME]=" //last name-- feel free to add this field
+              +  "&double_optin=false" //add to list even if email is invalid
+              +  "&send_welcome=false"; //send an email notification to new subscriber
+  $.ajax({
+        type: "POST",
+        url: url,
+        dataType: 'jsonp',
+        success: function(data) {
+          $('#subscribe-form').html("Thank you!");
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          alert(errorThrown);
+        }
+    });//EO ajax
+  });//EO click bind
+}
+
 function loadDrift(){
   !function() {
     var t = window.driftt = window.drift = window.driftt || [];
@@ -170,6 +198,8 @@ function prepareVideo(){
   $("#mstime").html(formatAMPM(new Date));
 
   fetchYouTubeContent();
+
+  mailchimp();
 
   
 
