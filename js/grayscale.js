@@ -95,26 +95,73 @@ function displayVideo(id, target, col){
   prepareVideo();
 }
 
-function fetchYouTubeContent() {
-  $.get("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC_LeagWn1clfNskUl8J4fFg&maxResults=10&order=date&type=video&key=AIzaSyBHxYD243TlGIVbEP__9g2qcJI0obT8kRE")
-    .done(function(res) {
-      console.log(res.items);
-      var videos = res.items;
-      var count = 0;
-      videos.slice(0,1).forEach(function(video){
-        console.log(video);
-        if(count === 0) displayVideo(video.id.videoId, "featured-video", "col-12");
-        else displayVideo(video.id.videoId, "videos", "col-sm-6 col-12");
-        count++;
-        console.log(count);
-      });
-    })
-    .fail(function(err) {
-      console.log( "error" );
-    })
-    .always(function(res) {
-      console.log(res);
-    });
+// function fetchYouTubeContent() {
+//   $.get("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC_LeagWn1clfNskUl8J4fFg&maxResults=10&order=date&type=video&key=AIzaSyBHxYD243TlGIVbEP__9g2qcJI0obT8kRE")
+//     .done(function(res) {
+//       console.log(res.items);
+//       var videos = res.items;
+//       var count = 0;
+//       videos.slice(0,1).forEach(function(video){
+//         console.log(video);
+//         if(count === 0) displayVideo(video.id.videoId, "featured-video", "col-12");
+//         else displayVideo(video.id.videoId, "videos", "col-sm-6 col-12");
+//         count++;
+//         console.log(count);
+//       });
+//     })
+//     .fail(function(err) {
+//       console.log( "error" );
+//     })
+//     .always(function(res) {
+//       console.log(res);
+//     });
+// }
+
+
+function submitForm($form, url, data){
+  // var note = displayNotification('Please wait...', 'success', false);
+  $.ajax({
+      url: url,
+      method: $form.attr('method'),
+      data: data,
+      success: function(res){
+          console.log(res);
+          var resContainer = $form.find(".form-res");
+          resContainer.empty();
+          if(res.status === 'subscribed' || res.message === "Member Exists"){
+              resContainer.append(`
+                  <div class='alert alert-success'>
+                      Success!
+                  </div>
+                  <a class="text-white" href="#" download="/songs/Still-At-Ease_by_Partial-Perspectives.mp3">Click here to Download if It Doesn't Automatically</a>
+              `);
+              $form.trigger('reset');
+          } else {
+              resContainer.append(`
+                  <div class='alert alert-danger'>
+                      There was an error or you are already signed up.
+                  </div>
+              `);
+          }
+          // note.fadeOut();
+      },
+      error: function(err){
+          console.log(err);
+          // note.fadeOut();
+      },
+      complete: function(res){
+        var filename = "/songs/Still-At-Ease_by_Partial-Perspectives.mp3"
+        var a = document.createElement('a');
+        a.setAttribute('href', "#");
+        a.setAttribute('download', filename);
+
+        var aj = $(a);
+        aj.appendTo('body');
+        aj[0].click();
+        aj.remove();
+        aj.appendTo(".form-res")
+      }
+  });
 }
 
 function formatAMPM(date) {
@@ -169,7 +216,7 @@ function prepareVideo(){
   AOS.init();
   $("#mstime").html(formatAMPM(new Date));
 
-  fetchYouTubeContent();
+  // fetchYouTubeContent();
 
   
 
@@ -204,17 +251,17 @@ function prepareVideo(){
   });
 
   // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
-      $("#mainNav").addClass("navbar-shrink");
-    } else {
-      $("#mainNav").removeClass("navbar-shrink");
-    }
-  };
+  // var navbarCollapse = function() {
+  //   if ($("#mainNav").offset().top > 100) {
+  //     $("#mainNav").addClass("navbar-shrink");
+  //   } else {
+  //     $("#mainNav").removeClass("navbar-shrink");
+  //   }
+  // };
   // Collapse now if page is not at top
-  navbarCollapse();
+  // navbarCollapse();
   // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
+  // $(window).scroll(navbarCollapse);
 
   $(window).resize(function() {
     var windowsize = $(window).width();
@@ -240,7 +287,6 @@ function prepareVideo(){
       $("body").css({
         'padding-top': '0px'
       });
-      console.log("this big")
       $(".nav-tagline").hide();
       // $(".navbar-brand").html('Session Songs<br/><small class="d-block">Professional Guitar <br/>& Vocal Tracks</small>');
       $("#drift-widget").show();
@@ -258,8 +304,16 @@ function prepareVideo(){
   setHeight($('contact-message'))
 
   // youtube optimization code from https://www.onqmarketing.com.au/youtube-embed-generator/
-  !function(){for(var t=document.getElementsByClassName("onq-youtube-player"),e=0;e<t.length;e++)t[e].onclick=function(){var t=document.createElement("iframe"),e="true"==this.dataset.ssv?"1":"0",s="true"==this.dataset.spc?"1":"0",i="true"==this.dataset.sta?"1":"0",a="true"==this.dataset.dkc?"1":"0",r="true"==this.dataset.ecc?"1":"0",o="true"==this.dataset.eap?"1":"0";for(t.setAttribute("src","//www.youtube.com/embed/"+this.dataset.id+"?rel="+e+"&controls="+s+"&showinfo="+i+"&disablekb="+a+"&cc_load_policy="+r+"&autoplay="+o),t.setAttribute("frameborder","0"),t.setAttribute("id","youtube-iframe"),t.setAttribute("style","width: 100%; height: 100%; position: absolute; top: 0; left: 0;"),"true"==this.dataset.afs&&t.setAttribute("allowfullscreen","");this.firstChild;)this.removeChild(this.firstChild);this.appendChild(t)}}();
+  // !function(){for(var t=document.getElementsByClassName("onq-youtube-player"),e=0;e<t.length;e++)t[e].onclick=function(){var t=document.createElement("iframe"),e="true"==this.dataset.ssv?"1":"0",s="true"==this.dataset.spc?"1":"0",i="true"==this.dataset.sta?"1":"0",a="true"==this.dataset.dkc?"1":"0",r="true"==this.dataset.ecc?"1":"0",o="true"==this.dataset.eap?"1":"0";for(t.setAttribute("src","//www.youtube.com/embed/"+this.dataset.id+"?rel="+e+"&controls="+s+"&showinfo="+i+"&disablekb="+a+"&cc_load_policy="+r+"&autoplay="+o),t.setAttribute("frameborder","0"),t.setAttribute("id","youtube-iframe"),t.setAttribute("style","width: 100%; height: 100%; position: absolute; top: 0; left: 0;"),"true"==this.dataset.afs&&t.setAttribute("allowfullscreen","");this.firstChild;)this.removeChild(this.firstChild);this.appendChild(t)}}();
 
-  
+  $("#newsletter-form").submit(function(e){
+    e.preventDefault();
+    var data = {
+        firstName: $("#firstName").val(),
+        lastName: $("#lastName").val(),
+        email: $("#email-input").val()
+    };
+    submitForm($(this), "https://sessionsbysteven.herokuapp.com/api/mcSignup", data);
+});
 
 })(jQuery); // End of use strict
