@@ -159,7 +159,10 @@ function submitForm($form, url, data){
         aj.appendTo('body');
         aj[0].click();
         aj.remove();
-        aj.appendTo(".form-res")
+        aj.appendTo(".form-res");
+        fbq('track', 'CompleteRegistration', {
+          value: 1,
+        });
       }
   });
 }
