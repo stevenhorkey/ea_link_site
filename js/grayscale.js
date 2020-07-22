@@ -156,11 +156,11 @@ function submitForm($form, url, data){
         // a.setAttribute('download', filename);
         var url = "/songs/Compromise_by_Partial-Perspectives.mp3";
         openInNewTab(url);
-
         
         fbq('track', 'CompleteRegistration', {
           value: 1,
         });
+
       }
   });
 }
