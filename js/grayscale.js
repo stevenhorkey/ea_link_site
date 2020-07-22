@@ -133,7 +133,7 @@ function submitForm($form, url, data){
                   <div class='alert alert-success'>
                       Success!
                   </div>
-                  <a class="text-white" href="#" download="/songs/Still-At-Ease_by_Partial-Perspectives.mp3">Click here to Download if It Doesn't Automatically</a>
+                  <a class="text-white" href="/songs/Compromise_by_Partial-Perspectives.mp3" target="_blank">If the song doesn't download automatically, click here.</a>
               `);
               $form.trigger('reset');
           } else {
@@ -150,21 +150,24 @@ function submitForm($form, url, data){
           // note.fadeOut();
       },
       complete: function(res){
-        var filename = "/songs/Still-At-Ease_by_Partial-Perspectives.mp3"
-        var a = document.createElement('a');
-        a.setAttribute('href', "#");
-        a.setAttribute('download', filename);
+        // var filename = "Compromise_by_Partial-Perspectives.mp3"
+        // var a = document.createElement('a');
+        // a.setAttribute('href', "#");
+        // a.setAttribute('download', filename);
+        var url = "/songs/Compromise_by_Partial-Perspectives.mp3";
+        openInNewTab(url);
 
-        var aj = $(a);
-        aj.appendTo('body');
-        aj[0].click();
-        aj.remove();
-        aj.appendTo(".form-res");
+        
         fbq('track', 'CompleteRegistration', {
           value: 1,
         });
       }
   });
+}
+
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
 }
 
 function formatAMPM(date) {
