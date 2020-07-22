@@ -154,14 +154,15 @@ function submitForm($form, url, data){
         // var a = document.createElement('a');
         // a.setAttribute('href', "#");
         // a.setAttribute('download', filename);
-        var url = "/songs/Compromise_by_Partial-Perspectives.mp3";
-        openInNewTab(url);
-
         
-        fbq('track', 'CompleteRegistration', {
-          value: 1,
-        });
       }
+  });
+  var url = "/songs/Compromise_by_Partial-Perspectives.mp3";
+  openInNewTab(url);
+
+  
+  fbq('track', 'CompleteRegistration', {
+    value: 1,
   });
 }
 
