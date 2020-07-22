@@ -150,14 +150,16 @@ function submitForm($form, url, data){
           // note.fadeOut();
       },
       complete: function(res){
-        var url = "/songs/Still-At-Ease_by_Partial-Perspectives.mp3";
-        openInNewTab(url);
         
-        fbq('track', 'CompleteRegistration', {
-          value: 1,
-        });
 
       }
+  });
+
+  var url = "/songs/Still-At-Ease_by_Partial-Perspectives.mp3";
+  openInNewTab(url);
+  
+  fbq('track', 'CompleteRegistration', {
+    value: 1,
   });
 }
 
