@@ -4,6 +4,10 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
  */
 
+h1 {
+  font-size: 1.25em;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");
 #mainNav {
   min-height: 56px;
@@ -211,7 +215,7 @@ li i {
 }
 
 .masthead .container {
-  padding-top: 50px;
+  /* padding-top: 50px; */
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
@@ -222,9 +226,9 @@ li i {
 
 .masthead h1 {
   font-family: 'Lato';
-  font-size: 2.0rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.8rem;
+  font-size: 1.3rem;
+  line-height: 2.0rem;
+  letter-spacing: 0.4rem;
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -235,6 +239,10 @@ li i {
   font-size: 19px;
   color: #ced4da;
 }
+
+/* h3, h4, h5 {
+  color: white;
+} */
 
 @media (min-width: 768px) {
   .masthead h1 {
@@ -676,7 +684,7 @@ footer {
   -webkit-box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.1);
   box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.1);
   margin: 20px 0;
-  padding: 30px;
+  padding: 20px;
   background-color: #ffffff75;
 }
 
