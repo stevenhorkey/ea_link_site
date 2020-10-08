@@ -110,7 +110,7 @@ function fetchYouTubeContent() {
       });
     })
     .fail(function(err) {
-      console.log( "error" );
+      console.log( "error", err );
     })
     .always(function(res) {
       console.log(res);
@@ -210,10 +210,10 @@ function prepareVideo(){
 (function($) {
   "use strict"; // Start of use strict
 
-  AOS.init();
+  // AOS.init();
   $("#mstime").html(formatAMPM(new Date));
 
-  fetchYouTubeContent();
+  // fetchYouTubeContent();
 
   
 
@@ -284,7 +284,6 @@ function prepareVideo(){
       $("body").css({
         'padding-top': '0px'
       });
-      console.log("this big")
       $(".nav-tagline").hide();
       // $(".navbar-brand").html('Session Songs<br/><small class="d-block">Professional Guitar <br/>& Vocal Tracks</small>');
       $("#drift-widget").show();
