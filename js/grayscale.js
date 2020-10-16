@@ -247,6 +247,13 @@ function prepareVideo(){
     offset: 100
   });
 
+  // Trigger conversion on a tag click
+  $('a').click(function(e){
+      e.preventDefault();
+      fbq('track', 'Lead');
+      window.location = $(this).attr('href');
+  })
+
   // Collapse Navbar
   var navbarCollapse = function() {
     // if ($("#mainNav").offset().top > 100) {
